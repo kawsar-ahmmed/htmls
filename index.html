@@ -1,378 +1,734 @@
 <!DOCTYPE html>
-<html lang="bn">
+<html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>NextPaz — L1 Marketing Plan</title>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+Bengali:wght@400;500;600;700&display=swap" rel="stylesheet">
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Event Strategy Guide — Marketing Team</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"/>
 <style>
-:root{--bg:#f4f5f7;--surface:#ffffff;--text:#111827;--text-sec:#4b5563;--border:#e5e7eb;--primary:#2563eb;--primary-light:#dbeafe;--primary-dark:#1d4ed8;--success:#10b981;--success-light:#d1fae5;--success-bg:#ecfdf5;--warning:#f59e0b;--warning-light:#fef3c7;--danger:#ef4444;--danger-light:#fee2e2;--muted:#9ca3af;--radius:12px;--shadow:0 1px 3px rgba(0,0,0,0.04),0 4px 20px rgba(0,0,0,0.03);}
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
-html{scroll-behavior:smooth;}
-body{font-family:Inter,'Noto Sans Bengali',-apple-system,BlinkMacSystemFont,system-ui,sans-serif;background:var(--bg);color:var(--text);line-height:1.6;-webkit-font-smoothing:antialiased;}
-.app{display:flex;min-height:100vh;}
-.sidebar{background:var(--surface);border-right:1px solid var(--border);padding:24px 16px;width:260px;flex-shrink:0;position:sticky;top:0;height:100vh;overflow-y:auto;z-index:20;}
-.brand{display:flex;align-items:center;gap:10px;font-weight:800;font-size:18px;margin-bottom:28px;padding:0 8px;letter-spacing:-0.02em;}
-.brand-dot{width:10px;height:10px;border-radius:50%;background:var(--success);box-shadow:0 0 0 3px var(--success-light);}
-.badge{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;padding:3px 8px;border-radius:6px;background:var(--primary-light);color:var(--primary-dark);}
-.nav-title{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.07em;color:var(--muted);margin:24px 8px 8px;}
-.nav-item{display:flex;align-items:center;gap:10px;padding:8px 10px;border-radius:8px;cursor:pointer;font-size:13.5px;font-weight:500;color:var(--text-sec);text-decoration:none;transition:all .12s ease;margin-bottom:2px;border:1px solid transparent;}
-.nav-item:hover{background:var(--bg);color:var(--text);border-color:var(--border);}
-.nav-item.active{background:var(--primary-light);color:var(--primary-dark);font-weight:600;border-color:#bfdbfe;}
-.main{flex:1;padding:32px 40px 60px;min-width:0;}
-.main-inner{max-width:1000px;margin:0 auto;}
-.page-header{margin-bottom:36px;padding-bottom:24px;border-bottom:1px solid var(--border);}
-.page-header h1{font-size:30px;font-weight:800;margin-bottom:8px;letter-spacing:-0.025em;}
-.page-header p{color:var(--text-sec);font-size:15.5px;}
-.meta-row{display:flex;gap:12px;margin-top:16px;flex-wrap:wrap;}
-.meta-chip{display:flex;align-items:center;gap:8px;font-size:13px;padding:6px 14px;border-radius:20px;background:var(--surface);border:1px solid var(--border);font-weight:500;box-shadow:0 1px 2px rgba(0,0,0,0.03);}
-.meta-chip .dot{width:7px;height:7px;border-radius:50%;}
-.card{background:var(--surface);border-radius:var(--radius);border:1px solid var(--border);box-shadow:var(--shadow);padding:28px;margin-bottom:24px;}
-.card-header{display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:20px;gap:12px;flex-wrap:wrap;}
-.card-header-left{flex:1;min-width:0;}
-.card-title{font-size:18px;font-weight:700;display:flex;align-items:center;gap:10px;letter-spacing:-0.01em;}
-.card-subtitle{font-size:13.5px;color:var(--text-sec);margin-top:4px;}
-.table-wrap{overflow-x:auto;margin:0 -4px;padding:0 4px;}
-table{width:100%;border-collapse:separate;border-spacing:0;font-size:14px;}
-th{text-align:left;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.05em;color:var(--muted);padding:12px;border-bottom:2px solid var(--border);background:#f9fafb;white-space:nowrap;}
-td{padding:14px 12px;border-bottom:1px solid var(--border);vertical-align:top;word-break:break-word;}
-tbody tr:last-child td{border-bottom:none;}
-.pill{display:inline-flex;align-items:center;gap:6px;font-size:12px;font-weight:600;padding:3px 10px;border-radius:20px;white-space:nowrap;}
-.pill-green{background:var(--success-light);color:#065f46;}
-.pill-amber{background:var(--warning-light);color:#92400e;}
-.pill-red{background:var(--danger-light);color:#991b1b;}
-.pill-blue{background:var(--primary-light);color:#1e40af;}
-.pill-gray{background:#f3f4f6;color:#4b5563;}
-.pill-dot{width:6px;height:6px;border-radius:50%;flex-shrink:0;}
-.creative-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:16px;}
-.creative-card{border:1px solid var(--border);border-radius:10px;padding:20px;background:#f9fafb;transition:box-shadow .15s ease,border-color .15s ease;}
-.creative-card:hover{border-color:#c7d2fe;box-shadow:0 2px 8px rgba(0,0,0,0.04);}
-.creative-tag{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.05em;color:var(--primary);margin-bottom:10px;}
-.creative-hl{font-size:15px;font-weight:700;margin-bottom:10px;line-height:1.5;color:#1f2937;}
-.creative-bd{font-size:13.5px;color:var(--text-sec);margin-bottom:14px;line-height:1.55;}
-.creative-row{display:flex;gap:10px;font-size:12px;flex-wrap:wrap;}
-.creative-row span{background:var(--surface);padding:5px 10px;border-radius:6px;border:1px solid var(--border);font-weight:500;color:#374151;}
-.forbidden-box{background:var(--danger-light);border:1px solid #fecaca;border-radius:8px;padding:14px 16px;font-size:13px;color:#991b1b;margin-top:16px;line-height:1.6;}
-.forbidden-box strong{display:block;margin-bottom:6px;color:#7f1d1d;}
-.budget-row{display:flex;align-items:center;gap:14px;margin-bottom:14px;flex-wrap:nowrap;}
-.budget-label{width:170px;font-size:14px;font-weight:600;flex-shrink:0;color:#374151;}
-.budget-bar-wrap{flex:1;height:32px;background:var(--bg);border-radius:8px;overflow:hidden;position:relative;border:1px solid var(--border);}
-.budget-bar{height:100%;border-radius:8px;transition:width .5s ease;position:relative;}
-.budget-bar::after{content:'';position:absolute;inset:0;background:linear-gradient(90deg,rgba(255,255,255,0) 0%,rgba(255,255,255,0.25) 50%,rgba(255,255,255,0) 100%);}
-.budget-value{width:70px;text-align:right;font-weight:700;font-size:14px;flex-shrink:0;color:#111827;}
-.checklist{list-style:none;}
-.checklist li{display:flex;align-items:flex-start;gap:12px;padding:12px 0;font-size:14.5px;border-bottom:1px solid var(--border);}
-.checklist li:last-child{border-bottom:none;}
-.check{width:22px;height:22px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;flex-shrink:0;margin-top:1px;}
-.check-done{background:var(--success);color:#fff;}
-.check-wait{background:var(--bg);color:var(--muted);border:1.5px solid var(--border);width:21px;height:21px;}
-.check-x{background:var(--danger);color:#fff;}
-.landing-card{display:flex;align-items:center;gap:14px;padding:14px 18px;border:1px solid var(--border);border-radius:10px;margin-bottom:10px;background:var(--surface);flex-wrap:wrap;transition:border-color .12s ease;}
-.landing-card:hover{border-color:#bfdbfe;}
-.landing-slug{font-family:ui-monospace,SFMono-Regular,monospace;font-size:12.5px;font-weight:600;color:var(--primary);background:var(--primary-light);padding:4px 10px;border-radius:6px;flex-shrink:0;}
-.landing-url{font-family:ui-monospace,SFMono-Regular,monospace;font-size:12px;color:var(--text-sec);}
-.landing-info{flex:1;min-width:200px;}
-.landing-cta{font-size:13px;font-weight:600;display:flex;align-items:center;gap:8px;flex-shrink:0;white-space:nowrap;}
-.timeline{border-left:2px solid #d1d5db;margin-left:10px;padding-left:22px;}
-.timeline-item{position:relative;padding-bottom:20px;}
-.timeline-item:last-child{padding-bottom:0;}
-.timeline-item::before{content:'';position:absolute;left:-27.5px;top:5px;width:11px;height:11px;border-radius:50%;background:var(--primary);border:2px solid var(--surface);box-shadow:0 0 0 2px #bfdbfe;}
-.timeline-time{font-size:11px;font-weight:700;color:var(--primary);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:6px;}
-.timeline-text{font-size:14.5px;color:var(--text);line-height:1.55;}
-.section{margin-bottom:48px;}
-.mt-2{margin-top:8px;}
-.mt-3{margin-top:12px;}
-.mt-4{margin-top:16px;}
-.text-muted{color:var(--text-sec);}
-.font-mono{font-family:ui-monospace,SFMono-Regular,monospace;}
-.text-sm{font-size:13px;}
-.subcard{background:#f9fafb;border-radius:10px;padding:20px;border:1px solid var(--border);margin-bottom:16px;}
-.subcard-title{display:flex;align-items:center;gap:10px;margin-bottom:14px;}
-.subcard-title strong{font-size:15px;font-weight:700;color:#1f2937;}
-
-@media(max-width:960px){
-.sidebar{display:none;}
-.main{padding:24px;}
-.creative-grid{grid-template-columns:1fr;}
-.budget-row{flex-wrap:wrap;}
-.budget-bar-wrap{width:100%;order:3;}
+*{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --blue:#3B82F6;--blue-light:#EFF6FF;--blue-mid:#BFDBFE;--blue-dark:#1D4ED8;
+  --green:#10B981;--green-light:#ECFDF5;--green-mid:#A7F3D0;--green-dark:#047857;
+  --red:#EF4444;--red-light:#FEF2F2;--red-mid:#FECACA;--red-dark:#B91C1C;
+  --orange:#F59E0B;--orange-light:#FFFBEB;--orange-mid:#FDE68A;--orange-dark:#B45309;
+  --purple:#8B5CF6;--purple-light:#F5F3FF;--purple-mid:#DDD6FE;--purple-dark:#6D28D9;
+  --gray:#6B7280;--gray-light:#F9FAFB;--gray-mid:#E5E7EB;--gray-dark:#374151;
+  --surface:#FFFFFF;--bg:#F3F4F6;--text:#111827;--muted:#6B7280;--border:#E5E7EB;
+  --radius:10px;--radius-lg:16px;--shadow:0 1px 3px rgba(0,0,0,.08),0 1px 2px rgba(0,0,0,.05);
+  --shadow-md:0 4px 16px rgba(0,0,0,.10),0 2px 6px rgba(0,0,0,.06);
 }
-@media(max-width:640px){
-.main{padding:16px;}
-.card{padding:18px;}
-.page-header h1{font-size:24px;}
-.landing-card{padding:12px 14px;gap:10px;}
-.landing-cta{white-space:normal;flex-wrap:wrap;}
-.budget-label{width:100%;}
+body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);min-height:100vh;font-size:14px;line-height:1.5}
+
+/* ── HEADER ── */
+.header{background:linear-gradient(135deg,#1E3A5F 0%,#1a3a7a 50%,#2D1B69 100%);color:#fff;padding:36px 32px 28px;position:relative;overflow:hidden}
+.header::before{content:'';position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Ccircle cx='30' cy='30' r='20'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")}
+.header-inner{position:relative;max-width:1000px;margin:auto}
+.header-top{display:flex;align-items:center;gap:14px;margin-bottom:10px}
+.header-icon{width:44px;height:44px;background:rgba(255,255,255,.15);border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:22px;flex-shrink:0}
+.header h1{font-size:24px;font-weight:700;letter-spacing:-.3px}
+.header-sub{font-size:13px;color:rgba(255,255,255,.65);margin-top:4px}
+.header-badges{display:flex;gap:8px;margin-top:16px;flex-wrap:wrap}
+.h-badge{font-size:11px;font-weight:500;padding:4px 10px;border-radius:20px;background:rgba(255,255,255,.12);color:rgba(255,255,255,.9);border:1px solid rgba(255,255,255,.15)}
+
+/* ── MAIN ── */
+.main{max-width:1000px;margin:0 auto;padding:24px 20px 60px}
+
+/* ── TABS ── */
+.tabs{display:flex;gap:4px;background:var(--surface);border-radius:var(--radius-lg);padding:5px;box-shadow:var(--shadow);margin-bottom:22px;flex-wrap:wrap}
+.tab{flex:1;min-width:120px;padding:9px 14px;border-radius:8px;font-size:13px;font-weight:500;cursor:pointer;border:none;background:transparent;color:var(--muted);transition:all .18s;display:flex;align-items:center;justify-content:center;gap:6px}
+.tab:hover{background:var(--gray-light);color:var(--gray-dark)}
+.tab.active{background:linear-gradient(135deg,#1E3A5F,#2D1B69);color:#fff;box-shadow:0 2px 8px rgba(30,58,95,.35)}
+.tab-icon{font-size:15px}
+
+/* ── PANELS ── */
+.panel{display:none;animation:fadeIn .2s ease}
+.panel.active{display:block}
+@keyframes fadeIn{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}
+
+/* ── SECTION TITLE ── */
+.section-label{font-size:11px;font-weight:600;letter-spacing:.07em;text-transform:uppercase;color:var(--muted);margin:0 0 12px}
+
+/* ── LAYER CARDS ── */
+.layer-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:14px;margin-bottom:24px}
+.layer-card{background:var(--surface);border-radius:var(--radius-lg);padding:20px;box-shadow:var(--shadow);border-top:4px solid transparent;transition:transform .18s,box-shadow .18s}
+.layer-card:hover{transform:translateY(-2px);box-shadow:var(--shadow-md)}
+.layer-card.blue{border-top-color:var(--blue)}
+.layer-card.green{border-top-color:var(--green)}
+.layer-card.red{border-top-color:var(--red)}
+.lc-head{display:flex;align-items:center;gap:12px;margin-bottom:12px}
+.lc-icon{width:42px;height:42px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0}
+.lc-icon.blue{background:var(--blue-light)}
+.lc-icon.green{background:var(--green-light)}
+.lc-icon.red{background:var(--red-light)}
+.lc-title{font-size:15px;font-weight:600;color:var(--text)}
+.lc-count{font-size:11px;font-weight:500;color:var(--muted);margin-top:1px}
+.lc-desc{font-size:13px;color:var(--muted);line-height:1.6}
+.lc-tags{display:flex;flex-wrap:wrap;gap:5px;margin-top:12px}
+.lc-tag{font-size:11px;padding:3px 8px;border-radius:6px;font-weight:500}
+.lc-tag.blue{background:var(--blue-light);color:var(--blue-dark)}
+.lc-tag.green{background:var(--green-light);color:var(--green-dark)}
+.lc-tag.red{background:var(--red-light);color:var(--red-dark)}
+
+/* ── STATS ── */
+.stats-row{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:24px}
+.stat-card{background:var(--surface);border-radius:var(--radius-lg);padding:16px 20px;box-shadow:var(--shadow);text-align:center}
+.stat-num{font-size:32px;font-weight:700;background:linear-gradient(135deg,#1E3A5F,#2D1B69);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.stat-label{font-size:12px;color:var(--muted);margin-top:3px}
+
+/* ── BIG PICTURE FLOW ── */
+.flow-card{background:var(--surface);border-radius:var(--radius-lg);padding:20px;box-shadow:var(--shadow);margin-bottom:24px}
+.flow-title{font-size:13px;font-weight:600;color:var(--text);margin-bottom:16px;display:flex;align-items:center;gap:6px}
+.flow-steps{display:flex;flex-direction:column;gap:10px}
+.flow-step{display:flex;align-items:flex-start;gap:10px}
+.flow-line{display:flex;flex-direction:column;align-items:center}
+.flow-dot{width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:13px;flex-shrink:0;font-weight:600}
+.flow-connector{width:2px;flex:1;min-height:12px;margin:2px 0;background:var(--border)}
+.flow-body{flex:1;padding-bottom:4px}
+.flow-step-title{font-size:13px;font-weight:600;color:var(--text);margin-bottom:4px}
+.flow-chips{display:flex;flex-wrap:wrap;gap:5px}
+.chip{font-size:11px;font-weight:500;padding:3px 8px;border-radius:6px;display:inline-flex;align-items:center;gap:4px}
+.chip.blue{background:var(--blue-light);color:var(--blue-dark)}
+.chip.green{background:var(--green-light);color:var(--green-dark)}
+.chip.orange{background:var(--orange-light);color:var(--orange-dark)}
+.chip.red{background:var(--red-light);color:var(--red-dark)}
+.chip.gray{background:var(--gray-light);color:var(--gray-dark);border:1px solid var(--border)}
+.chip.purple{background:var(--purple-light);color:var(--purple-dark)}
+
+/* ── FILTER ROW ── */
+.filter-row{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:14px}
+.filter-btn{font-size:12px;font-weight:500;padding:5px 12px;border-radius:20px;border:1.5px solid var(--border);background:var(--surface);color:var(--muted);cursor:pointer;transition:all .15s;display:flex;align-items:center;gap:5px}
+.filter-btn:hover{border-color:var(--blue);color:var(--blue)}
+.filter-btn.on{background:var(--blue);color:#fff;border-color:var(--blue)}
+
+/* ── EVENT CARDS ── */
+.events-list{display:flex;flex-direction:column;gap:8px}
+.ev-card{background:var(--surface);border-radius:var(--radius);box-shadow:var(--shadow);overflow:hidden;transition:box-shadow .18s;border:1.5px solid transparent}
+.ev-card:hover{box-shadow:var(--shadow-md)}
+.ev-card.expanded{border-color:var(--blue)}
+.ev-header{display:flex;align-items:center;gap:10px;padding:12px 16px;cursor:pointer;user-select:none}
+.ev-type-icon{width:32px;height:32px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:16px;flex-shrink:0}
+.ev-name{font-size:13px;font-weight:600;color:var(--text);flex:1}
+.ev-plain{font-size:12px;color:var(--muted);margin-right:4px}
+.ev-badge{font-size:10px;font-weight:600;padding:3px 8px;border-radius:12px;white-space:nowrap;flex-shrink:0;letter-spacing:.03em;text-transform:uppercase}
+.badge-core{background:var(--green-light);color:var(--green-dark)}
+.badge-gap{background:var(--orange-light);color:var(--orange-dark)}
+.badge-view{background:var(--blue-light);color:var(--blue-dark)}
+.badge-platform{background:var(--blue-light);color:var(--blue-dark)}
+.badge-tenant{background:var(--green-light);color:var(--green-dark)}
+.badge-fraud{background:var(--red-light);color:var(--red-dark)}
+.ev-chevron{font-size:11px;color:var(--muted);transition:transform .2s;flex-shrink:0}
+.ev-card.expanded .ev-chevron{transform:rotate(180deg)}
+.ev-detail{display:none;padding:0 16px 14px;border-top:1px solid var(--border)}
+.ev-card.expanded .ev-detail{display:block}
+.ev-detail-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px;margin-top:12px}
+.ev-detail-box{background:var(--gray-light);border-radius:8px;padding:10px 12px}
+.ev-dl{font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:.05em;color:var(--muted);margin-bottom:4px}
+.ev-dv{font-size:12px;color:var(--text);line-height:1.5}
+.ev-action-box{background:linear-gradient(135deg,#EFF6FF,#F5F3FF);border:1px solid var(--blue-mid);border-radius:8px;padding:10px 12px;margin-top:10px}
+.ev-al{font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:.05em;color:var(--blue-dark);margin-bottom:4px}
+.ev-av{font-size:12px;color:var(--blue-dark);line-height:1.5;font-weight:500}
+
+/* ── LEGEND ── */
+.legend{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:16px}
+.leg-item{display:flex;align-items:center;gap:6px;font-size:12px;color:var(--muted)}
+.leg-dot{width:10px;height:10px;border-radius:50%}
+
+/* ── JOURNEY ── */
+.journey-section{margin-bottom:20px}
+.journey-step-header{display:flex;align-items:center;gap:10px;margin-bottom:12px}
+.journey-num{width:28px;height:28px;background:linear-gradient(135deg,#1E3A5F,#2D1B69);color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;flex-shrink:0}
+.journey-step-title{font-size:14px;font-weight:600;color:var(--text)}
+.journey-card{background:var(--surface);border-radius:var(--radius-lg);box-shadow:var(--shadow);padding:16px 18px;margin-bottom:12px}
+.journey-flow{display:flex;flex-direction:column;gap:8px}
+.jf-row{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.jf-node{font-size:12px;font-weight:500;padding:5px 10px;border-radius:7px;display:flex;align-items:center;gap:5px}
+.jf-node.blue{background:var(--blue-light);color:var(--blue-dark)}
+.jf-node.green{background:var(--green-light);color:var(--green-dark)}
+.jf-node.orange{background:var(--orange-light);color:var(--orange-dark)}
+.jf-node.red{background:var(--red-light);color:var(--red-dark)}
+.jf-node.gray{background:var(--gray-light);color:var(--gray-dark);border:1px solid var(--border)}
+.jf-node.purple{background:var(--purple-light);color:var(--purple-dark)}
+.jf-arrow{font-size:14px;color:var(--muted);flex-shrink:0}
+.jf-note{font-size:11px;color:var(--muted);font-style:italic;margin-left:2px}
+
+/* ── SUPPRESSION EXPLAINER ── */
+.suppress-box{background:linear-gradient(135deg,var(--red-light),var(--orange-light));border:1px solid var(--red-mid);border-radius:var(--radius-lg);padding:18px 20px;margin-top:16px}
+.suppress-title{font-size:13px;font-weight:600;color:var(--red-dark);margin-bottom:10px;display:flex;align-items:center;gap:6px}
+.suppress-row{display:flex;align-items:center;gap:10px;margin-bottom:8px}
+.suppress-row:last-child{margin-bottom:0}
+.sup-label{font-size:12px;font-weight:600;padding:4px 10px;border-radius:6px;min-width:90px;text-align:center}
+.sup-desc{font-size:12px;color:var(--gray-dark)}
+.sup-out{font-size:12px;font-weight:600;padding:4px 10px;border-radius:6px;margin-left:auto}
+
+/* ── EMPTY ── */
+.empty{text-align:center;padding:40px 20px;color:var(--muted);font-size:13px}
+
+/* ── RESPONSIVE ── */
+@media(max-width:600px){
+  .header{padding:24px 16px 20px}
+  .main{padding:16px 12px 60px}
+  .stats-row{grid-template-columns:repeat(3,1fr)}
+  .stat-num{font-size:24px}
+  .tabs{gap:3px}
+  .tab{min-width:80px;font-size:12px;padding:8px 8px}
+  .ev-plain{display:none}
 }
 </style>
 </head>
 <body>
-<div class="app">
-<aside class="sidebar">
-<div class="brand"><div class="brand-dot"></div><div>NextPaz <span class="badge">L1</span></div></div>
-<div class="nav-title">Plan Sections</div>
-<a class="nav-item active" href="#snapshot"><span style="width:22px;display:inline-block;text-align:center">📋</span> Snapshot</a>
-<a class="nav-item" href="#funnel"><span style="width:22px;display:inline-block;text-align:center">🎯</span> Funnel Mix</a>
-<a class="nav-item" href="#campaigns"><span style="width:22px;display:inline-block;text-align:center">📢</span> Campaigns</a>
-<a class="nav-item" href="#budget"><span style="width:22px;display:inline-block;text-align:center">💰</span> Budget</a>
-<a class="nav-item" href="#creatives"><span style="width:22px;display:inline-block;text-align:center">🎨</span> Creatives</a>
-<a class="nav-item" href="#landings"><span style="width:22px;display:inline-block;text-align:center">🛬</span> Landing</a>
-<a class="nav-item" href="#tracking"><span style="width:22px;display:inline-block;text-align:center">📡</span> Tracking</a>
-<a class="nav-item" href="#routine"><span style="width:22px;display:inline-block;text-align:center">🔄</span> Routine</a>
-<a class="nav-item" href="#gate"><span style="width:22px;display:inline-block;text-align:center">🚪</span> Gate L2</a>
-<a class="nav-item" href="#dont"><span style="width:22px;display:inline-block;text-align:center">🚫</span> Don't Do</a>
-<a class="nav-item" href="#actions"><span style="width:22px;display:inline-block;text-align:center">✅</span> First Week</a>
-</aside>
 
-<main class="main">
-<div class="main-inner">
-<div class="page-header">
-<h1>L1 Marketing + Creative Plan</h1>
-<p>Funnel-aligned execution template for NextPaz Bangladesh launch.</p>
-<div class="meta-row">
-<div class="meta-chip"><span class="dot" style="background:var(--success)"></span>SAFE Mode</div>
-<div class="meta-chip"><span class="dot" style="background:var(--primary)"></span>BDT</div>
-<div class="meta-chip"><span class="dot" style="background:var(--warning)"></span>Phase 0–1</div>
-<div class="meta-chip"><span class="dot" style="background:#8b5cf6"></span>BD Audience</div>
-</div>
+<!-- HEADER -->
+<div class="header">
+  <div class="header-inner">
+    <div class="header-top">
+      <div class="header-icon">📡</div>
+      <div>
+        <h1>Event Strategy Guide</h1>
+        <div class="header-sub">For Marketing Team — How our system tracks user actions &amp; what we send to Meta</div>
+      </div>
+    </div>
+    <div class="header-badges">
+      <span class="h-badge">🏢 Platform Layer</span>
+      <span class="h-badge">🛒 Store Layer</span>
+      <span class="h-badge">🛡️ Fraud Layer</span>
+      <span class="h-badge">📊 15 Meta Events</span>
+    </div>
+  </div>
 </div>
 
-<section class="section" id="snapshot">
-<div class="card">
-<div class="card-header">
-<div class="card-header-left"><div class="card-title"><span>📋</span>1. Snapshot</div><div class="card-subtitle">Project overview</div></div>
-<span class="pill pill-green"><span class="pill-dot" style="background:#065f46"></span>Beginning</span>
-</div>
-<div class="table-wrap"><table>
-<tr><td style="width:160px;font-weight:600">Project</td><td>nextpaz (Bangladesh / BDT)</td></tr>
-<tr><td style="font-weight:600">Maturity</td><td><span class="pill pill-blue">L1 BEGINNING</span></td></tr>
-<tr><td style="font-weight:600">Mode</td><td><span class="pill pill-green">SAFE</span> — every action operator-queued</td></tr>
-<tr><td style="font-weight:600">Pixel Phase</td><td>Phase 0–1 (~0 trusted events)</td></tr>
-<tr><td style="font-weight:600">Auto-execute</td><td><span class="pill pill-red">NONE</span></td></tr>
-<tr><td style="font-weight:600">Products</td><td><strong>v2_monthly</strong> ৳699/mo | <strong>v2_yearly</strong> ৳4,599/yr<br><span class="text-muted text-sm">3-day free trial, no card</span></td></tr>
-<tr><td style="font-weight:600">Audience</td><td>BD Facebook sellers, small ecom, resellers</td></tr>
-<tr><td style="font-weight:600">Position</td><td>Website + Order Mgmt + Fraud Detection — one dashboard</td></tr>
-</table></div>
-</div>
-</section>
+<div class="main">
 
-<section class="section" id="funnel">
-<div class="card">
-<div class="card-header">
-<div class="card-header-left"><div class="card-title"><span>🎯</span>2. Funnel Mix at L1</div><div class="card-subtitle">Per 03-funnel-by-maturity.md</div></div>
-</div>
-<div class="table-wrap"><table>
-<thead><tr><th>Funnel</th><th>Status</th><th>Budget</th><th>Optimization</th><th>Auto</th></tr></thead>
-<tbody>
-<tr><td><strong>Acquisition</strong></td><td><span class="pill pill-green">✓ Active</span></td><td>65–70%</td><td>CompleteRegistration (or ViewContent)</td><td><span class="pill pill-gray">none</span></td></tr>
-<tr><td><strong>Activation</strong></td><td><span class="pill pill-amber">◐ Passive</span></td><td>0% paid</td><td>In-app only</td><td><span class="pill pill-gray">n/a</span></td></tr>
-<tr><td><strong>Trial</strong></td><td><span class="pill pill-green">✓ Latent</span></td><td>5–10%</td><td>StartTrial — after Phase 2</td><td><span class="pill pill-gray">none</span></td></tr>
-<tr><td><strong>Conversion</strong></td><td><span class="pill pill-green">✓ Small</span></td><td>15–20%</td><td>Purchase (Phase 3) or ViewContent</td><td><span class="pill pill-gray">none</span></td></tr>
-<tr><td><strong>Recovery</strong></td><td><span class="pill pill-amber">◐ Basic</span></td><td>5% cap</td><td>Purchase, single audience</td><td><span class="pill pill-gray">none</span></td></tr>
-<tr><td><strong>Expansion</strong></td><td><span class="pill pill-red">✗ Off</span></td><td>0%</td><td>Dispatcher rejects</td><td><span class="pill pill-red">blocked</span></td></tr>
-</tbody>
-</table></div>
-</div>
-</section>
+  <!-- TABS -->
+  <div class="tabs">
+    <button class="tab active" onclick="showPanel('overview',this)"><span class="tab-icon">🗺️</span>Overview</button>
+    <button class="tab" onclick="showPanel('meta',this)"><span class="tab-icon">📣</span>Meta Ad Events</button>
+    <button class="tab" onclick="showPanel('layers',this)"><span class="tab-icon">🗂️</span>All 3 Layers</button>
+    <button class="tab" onclick="showPanel('journey',this)"><span class="tab-icon">🚶</span>Seller Journey</button>
+  </div>
 
-<section class="section" id="campaigns">
-<div class="card">
-<div class="card-header">
-<div class="card-header-left"><div class="card-title"><span>📢</span>3. Campaign Structure</div><div class="card-subtitle">3-Campaign Consolidation</div></div>
-</div>
+  <!-- ═══════ OVERVIEW ═══════ -->
+  <div id="panel-overview" class="panel active">
 
-<div class="subcard">
-<div class="subcard-title"><span class="pill pill-blue">CAMPAIGN 1</span><strong>ASC Acquisition</strong></div>
-<div class="table-wrap"><table>
-<tr><td style="width:120px;font-weight:600">Funnels</td><td>Acquisition + (latent) Trial</td></tr>
-<tr><td style="font-weight:600">Budget</td><td>70–75% of daily cap</td></tr>
-<tr><td style="font-weight:600">Optimization</td><td>CompleteRegistration (or ViewContent at Phase 0)</td></tr>
-<tr><td style="font-weight:600">Landing</td><td>problem_landing → low_friction_signup</td></tr>
-<tr><td style="font-weight:600">Audience</td><td>Broad BD, age 22–45, interests: <span class="font-mono text-sm" style="background:var(--bg);padding:4px 8px;border-radius:4px;">Facebook Marketplace, Daraz seller, Shopify, WooCommerce, ecommerce</span></td></tr>
-<tr><td style="font-weight:600">Exclude</td><td>CompleteRegistration 14d, paid_live</td></tr>
-</table></div>
-</div>
+    <div class="section-label">The 3 tracking layers</div>
+    <div class="layer-grid">
+      <div class="layer-card blue">
+        <div class="lc-head">
+          <div class="lc-icon blue">🏢</div>
+          <div>
+            <div class="lc-title">Platform Layer</div>
+            <div class="lc-count">Platform DB — 25+ events</div>
+          </div>
+        </div>
+        <div class="lc-desc">Tracks business-level activity. Who signed up, paid, set up their store, and what plan they're on. This is the <strong>"who are they and are they paying?"</strong> layer.</div>
+        <div class="lc-tags">
+          <span class="lc-tag blue">Signups</span>
+          <span class="lc-tag blue">Subscriptions</span>
+          <span class="lc-tag blue">Payments</span>
+          <span class="lc-tag blue">Domains</span>
+          <span class="lc-tag blue">Trial</span>
+        </div>
+      </div>
+      <div class="layer-card green">
+        <div class="lc-head">
+          <div class="lc-icon green">🛒</div>
+          <div>
+            <div class="lc-title">Store Layer</div>
+            <div class="lc-count">Store DB — 20+ events</div>
+          </div>
+        </div>
+        <div class="lc-desc">Tracks what happens inside the seller's store. Products, orders, deliveries, courier updates. This is the <strong>"what's happening in their business?"</strong> layer.</div>
+        <div class="lc-tags">
+          <span class="lc-tag green">Products</span>
+          <span class="lc-tag green">Orders</span>
+          <span class="lc-tag green">Deliveries</span>
+          <span class="lc-tag green">Couriers</span>
+        </div>
+      </div>
+      <div class="layer-card red">
+        <div class="lc-head">
+          <div class="lc-icon red">🛡️</div>
+          <div>
+            <div class="lc-title">Fraud Layer</div>
+            <div class="lc-count">Fraud DB — 15+ events</div>
+          </div>
+        </div>
+        <div class="lc-desc">Scores every order for risk and blocks bad actors. This layer is the <strong>gatekeeper</strong> — it decides if a Purchase event is allowed to reach Meta or not.</div>
+        <div class="lc-tags">
+          <span class="lc-tag red">Risk scoring</span>
+          <span class="lc-tag red">Blocking</span>
+          <span class="lc-tag red">Suppression</span>
+        </div>
+      </div>
+    </div>
 
-<div class="subcard">
-<div class="subcard-title"><span class="pill pill-amber">CAMPAIGN 2</span><strong>Journey Retargeting</strong></div>
-<div class="table-wrap"><table>
-<tr><td style="width:120px;font-weight:600">Funnel</td><td>Conversion only</td></tr>
-<tr><td style="font-weight:600">Budget</td><td>15–20% of daily cap</td></tr>
-<tr><td style="font-weight:600">Optimization</td><td>Purchase (Phase 3) OR ViewContent</td></tr>
-<tr><td style="font-weight:600">Landing</td><td>pricing_page → checkout_page</td></tr>
-<tr><td style="font-weight:600">Audience</td><td>StartTrial 7d, no Purchase</td></tr>
-<tr><td style="font-weight:600">Exclude</td><td>Purchase 30d, paid_live</td></tr>
-</table></div>
-</div>
+    <div class="stats-row">
+      <div class="stat-card"><div class="stat-num">3</div><div class="stat-label">Tracking Layers</div></div>
+      <div class="stat-card"><div class="stat-num">3</div><div class="stat-label">Core Meta Events</div></div>
+      <div class="stat-card"><div class="stat-num">12</div><div class="stat-label">Support Meta Events</div></div>
+    </div>
 
-<div class="subcard">
-<div class="subcard-title"><span class="pill pill-red">CAMPAIGN 3</span><strong>Recovery (capped)</strong></div>
-<div class="table-wrap"><table>
-<tr><td style="width:120px;font-weight:600">Funnel</td><td>Recovery</td></tr>
-<tr><td style="font-weight:600">Budget</td><td>5% of daily cap <span class="pill pill-red" style="margin-left:6px">HARD CAP</span></td></tr>
-<tr><td style="font-weight:600">Optimization</td><td>Purchase</td></tr>
-<tr><td style="font-weight:600">Landing</td><td>recovery_pricing</td></tr>
-<tr><td style="font-weight:600">Audience</td><td>trial_extended OR grace_limited</td></tr>
-<tr><td style="font-weight:600">Exclude</td><td>paid_live (FUN-11 — always)</td></tr>
-</table></div>
-</div>
-</div>
-</section>
+    <div class="section-label">How it all connects — Big picture flow</div>
+    <div class="flow-card">
+      <div class="flow-title">🔄 From first visit to a real purchase</div>
+      <div class="flow-steps">
+        <div class="flow-step">
+          <div class="flow-line">
+            <div class="flow-dot" style="background:var(--blue-light);color:var(--blue-dark)">1</div>
+            <div class="flow-connector"></div>
+          </div>
+          <div class="flow-body">
+            <div class="flow-step-title">Signup &amp; Verification</div>
+            <div class="flow-chips">
+              <span class="chip blue">📝 user.registered</span>
+              <span class="chip blue">✉️ user.email_verified</span>
+              <span class="chip green">→ CompleteRegistration fires to Meta ✓</span>
+            </div>
+          </div>
+        </div>
+        <div class="flow-step">
+          <div class="flow-line">
+            <div class="flow-dot" style="background:var(--orange-light);color:var(--orange-dark)">2</div>
+            <div class="flow-connector"></div>
+          </div>
+          <div class="flow-body">
+            <div class="flow-step-title">Trial &amp; Value Discovery</div>
+            <div class="flow-chips">
+              <span class="chip orange">⏳ trial.started</span>
+              <span class="chip orange">💡 financial_impact_seen</span>
+              <span class="chip green">→ Subscribe + financial_impact_seen to Meta ✓</span>
+            </div>
+          </div>
+        </div>
+        <div class="flow-step">
+          <div class="flow-line">
+            <div class="flow-dot" style="background:var(--green-light);color:var(--green-dark)">3</div>
+            <div class="flow-connector"></div>
+          </div>
+          <div class="flow-body">
+            <div class="flow-step-title">First Order Placed</div>
+            <div class="flow-chips">
+              <span class="chip blue">🛒 order.created</span>
+              <span class="chip red">🛡️ fraud.scored</span>
+            </div>
+          </div>
+        </div>
+        <div class="flow-step">
+          <div class="flow-line">
+            <div class="flow-dot" style="background:var(--green-light);color:var(--green-dark)">✓</div>
+            <div class="flow-connector" style="background:transparent"></div>
+          </div>
+          <div class="flow-body">
+            <div class="flow-step-title">Outcome</div>
+            <div class="flow-chips">
+              <span class="chip green">✅ Clean → Purchase fires to Meta</span>
+              <span class="chip red">🚫 Flagged → Purchase suppressed, Meta not told</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
-<section class="section" id="budget">
-<div class="card">
-<div class="card-header">
-<div class="card-header-left"><div class="card-title"><span>💰</span>4. Daily Budget Allocation</div><div class="card-subtitle">Phase 1 example, cap ৳3,000 (HC-1)</div></div>
-</div>
-<div class="budget-row"><div class="budget-label">Acquisition+Trial</div><div class="budget-bar-wrap"><div class="budget-bar" style="width:75%;background:var(--primary);"></div></div><div class="budget-value">৳2,250</div><span class="pill pill-blue">75%</span></div>
-<div class="budget-row"><div class="budget-label">Conversion</div><div class="budget-bar-wrap"><div class="budget-bar" style="width:20%;background:var(--warning);"></div></div><div class="budget-value">৳600</div><span class="pill pill-amber">20%</span></div>
-<div class="budget-row"><div class="budget-label">Recovery</div><div class="budget-bar-wrap"><div class="budget-bar" style="width:5%;background:var(--danger);"></div></div><div class="budget-value">৳150</div><span class="pill pill-red">5%</span></div>
-<div style="border-top:2px solid var(--border);margin-top:8px;padding-top:10px;display:flex;justify-content:space-between;font-weight:700;font-size:15px;"><span>Total</span><span>৳3,000</span></div>
-<div class="forbidden-box mt-4"><strong>Phase 0 Note:</strong> If pixel still Phase 0: drop to ৳1,500–2,000/day, Acquisition only, optimize ViewContent until 50 trusted events.</div>
-</div>
-</section>
+    <div class="suppress-box">
+      <div class="suppress-title">🛡️ Why the Fraud Layer matters for Meta</div>
+      <div class="suppress-row">
+        <span class="sup-label" style="background:var(--green-light);color:var(--green-dark)">Clean order</span>
+        <span class="jf-arrow">→</span>
+        <span class="sup-desc">Fraud check passes → Purchase event fires to Meta → Meta optimizes toward real buyers</span>
+      </div>
+      <div class="suppress-row">
+        <span class="sup-label" style="background:var(--red-light);color:var(--red-dark)">Flagged order</span>
+        <span class="jf-arrow">→</span>
+        <span class="sup-desc">Fraud check fails → Purchase event is silently blocked → Meta never sees it → Ad quality stays clean</span>
+      </div>
+    </div>
+  </div>
 
-<section class="section" id="creatives">
-<div class="card">
-<div class="card-header"><div class="card-header-left"><div class="card-title"><span>🎨</span>5. Creative Library (BD/Bangla)</div><div class="card-subtitle">Funnel-tagged angles</div></div></div>
+  <!-- ═══════ META EVENTS ═══════ -->
+  <div id="panel-meta" class="panel">
 
-<div style="margin-bottom:24px;"><div style="display:flex;align-items:center;gap:10px;margin-bottom:12px;"><span class="pill pill-blue">Acquisition</span><span class="text-muted text-sm">cold, problem_aware — CR-FUN-1, CR-FUN-7</span></div>
-<div class="creative-grid">
-<div class="creative-card"><div class="creative-tag">Angle: fraud_fear</div><div class="creative-hl">"আপনার দোকানে আজ কত টাকার ফ্রড অর্ডার এসেছে — জানেন?"</div><div class="creative-bd">বাংলাদেশের ছোট ই-কমার্সে ১৫–৩০% অর্ডার ফেক বা রিটার্ন। ক্ষতি দেখা যায় না, কিন্তু প্রতিদিন হচ্ছে।</div><div class="creative-row"><span>CTA: "রিপোর্ট দেখুন"</span><span>Land: problem_landing</span></div></div>
-<div class="creative-card"><div class="creative-tag">Angle: courier_pain</div><div class="creative-hl">"Pathao/Steadfast রিটার্ন আপনার মার্জিন খেয়ে ফেলছে?"</div><div class="creative-bd">একটা ড্যাশবোর্ডে ফ্রড চেক + কুরিয়ার সিঙ্ক — অর্ডার লস বন্ধ।</div><div class="creative-row"><span>CTA: "ফ্রি দেখুন"</span><span>Land: problem_landing</span></div></div>
-<div class="creative-card"><div class="creative-tag">Angle: ops_chaos</div><div class="creative-hl">"Excel + Messenger + Page Inbox — অর্ডার হারাচ্ছেন?"</div><div class="creative-bd">একটা ড্যাশবোর্ডে সব অর্ডার, সব কাস্টমার, সব কুরিয়ার।</div><div class="creative-row"><span>CTA: "ফ্রি ট্রাই দেখুন"</span><span>Land: low_friction_signup</span></div></div>
-<div class="creative-card"><div class="creative-tag">Angle: qualifier_question</div><div class="creative-hl">"দিনে ৩০+ অর্ডার আসছে? তাহলে এটা আপনার জন্য।"</div><div class="creative-row"><span>CTA: "রিপোর্ট দেখুন"</span><span>Land: problem_landing</span></div></div>
-</div>
-<div class="forbidden-box"><strong>FORBIDDEN in Acquisition:</strong> ৳699/মাস, "Subscribe", "Pay now", "ফ্রি ট্রায়াল শেষ"</div>
-</div>
+    <div class="legend">
+      <div class="leg-item"><div class="leg-dot" style="background:var(--green)"></div>Core decision events</div>
+      <div class="leg-item"><div class="leg-dot" style="background:var(--orange)"></div>Gap / cron events (server jobs)</div>
+      <div class="leg-item"><div class="leg-dot" style="background:var(--blue)"></div>Trigger view events (browser)</div>
+    </div>
 
-<div style="margin-bottom:24px;"><div style="display:flex;align-items:center;gap:10px;margin-bottom:12px;"><span class="pill pill-green">Trial</span><span class="text-muted text-sm">warm, risk_removal — CR-FUN-3 (latent until Phase 2)</span></div>
-<div class="creative-grid">
-<div class="creative-card"><div class="creative-tag">Angle: no_card_needed</div><div class="creative-hl">"৩ দিন ফ্রি — কার্ড লাগবে না, শুধু ফোন নম্বর।"</div><div class="creative-row"><span>CTA: "ফ্রি ট্রায়াল শুরু"</span><span>Land: trial_activation</span></div></div>
-<div class="creative-card"><div class="creative-tag">Angle: fast_setup</div><div class="creative-hl">"৫ মিনিটে সেটআপ — আজকের অর্ডারে আজই রেজাল্ট।"</div><div class="creative-row"><span>CTA: "ট্রায়াল শুরু"</span><span>Land: trial_activation</span></div></div>
-</div>
-<div class="forbidden-box"><strong>FORBIDDEN in Trial:</strong> pricing tables, "Subscribe today"</div>
-</div>
+    <div class="filter-row">
+      <button class="filter-btn on" onclick="filterMeta('all',this)">🔍 All 15</button>
+      <button class="filter-btn" onclick="filterMeta('core',this)">⭐ Core (3)</button>
+      <button class="filter-btn" onclick="filterMeta('gap',this)">⏰ Gap / Cron (6)</button>
+      <button class="filter-btn" onclick="filterMeta('view',this)">👁️ Trigger Views (3)</button>
+    </div>
 
-<div style="margin-bottom:24px;"><div style="display:flex;align-items:center;gap:10px;margin-bottom:12px;"><span class="pill pill-amber">Conversion</span><span class="text-muted text-sm">trialing, value_proof — CR-FUN-4</span></div>
-<div class="creative-grid">
-<div class="creative-card"><div class="creative-tag">Angle: daily_price_framing</div><div class="creative-hl">"দিনে মাত্র ৳23 — আপনার একটা ফ্রড অর্ডার বাঁচালেই উঠে আসে।"</div><div class="creative-row"><span>CTA: "Subscribe now"</span><span>Land: pricing_page</span></div></div>
-<div class="creative-card"><div class="creative-tag">Angle: annual_value</div><div class="creative-hl">"Yearly নিন — ৳3,789 সেভ করুন, ১২ মাস টেনশন ফ্রি।"</div><div class="creative-row"><span>CTA: "Pick annual"</span><span>Land: pricing_page</span></div></div>
-</div>
-<div class="forbidden-box"><strong>FORBIDDEN in Conversion:</strong> "Try free again", cold problem framing</div>
-</div>
+    <div class="events-list" id="meta-list"></div>
+  </div>
 
-<div><div style="display:flex;align-items:center;gap:10px;margin-bottom:12px;"><span class="pill pill-red">Recovery</span><span class="text-muted text-sm">lapsed/expired, urgency_recovery — CR-FUN-5,8,9</span></div>
-<div class="creative-grid">
-<div class="creative-card"><div class="creative-tag">Angle: urgent_recovery</div><div class="creative-hl">"আপনার ট্রায়াল শেষ — ফ্রড প্যানেল ৪৮ ঘন্টায় বন্ধ হবে।"</div><div class="creative-row"><span>CTA: "Reactivate"</span><span>Land: recovery_pricing</span></div></div>
-<div class="creative-card"><div class="creative-tag">Angle: annual_savings_recovery</div><div class="creative-hl">"ফেরত আসুন Yearly-তে — ৳3,789 সেভ + পুরো ডেটা সেভ।"</div><div class="creative-row"><span>CTA: "Lock in annual"</span></div></div>
-</div>
-<div class="forbidden-box"><strong>FORBIDDEN in Recovery:</strong> "ফ্রি ট্রায়াল আবার নিন" (CR-FUN-8 violation)<br>Discount-only — must pair with consequence (data loss / panel close)<br>Per CR-FUN-6: hooks must be rewritten for each stage, not reused.</div>
-</div>
-</div>
-</section>
+  <!-- ═══════ ALL LAYERS ═══════ -->
+  <div id="panel-layers" class="panel">
 
-<section class="section" id="landings">
-<div class="card">
-<div class="card-header"><div class="card-header-left"><div class="card-title"><span>🛬</span>6. Landing Pages Needed</div><div class="card-subtitle">data/projects/nextpaz/landings.yaml</div></div></div>
-<div class="landing-card"><div class="landing-slug">problem_landing</div><div class="landing-info"><div class="landing-url">/fraud-problem-bd</div><div class="text-sm text-muted mt-2">Funnel: Acquisition</div></div><div class="landing-cta">রিপোর্ট দেখুন <span class="pill pill-gray">ViewContent</span></div></div>
-<div class="landing-card"><div class="landing-slug">low_friction_signup</div><div class="landing-info"><div class="landing-url">/signup</div><div class="text-sm text-muted mt-2">Funnel: Acquisition</div></div><div class="landing-cta">ফ্রি অ্যাকাউন্ট <span class="pill pill-gray">CompleteRegistration</span></div></div>
-<div class="landing-card"><div class="landing-slug">trial_activation</div><div class="landing-info"><div class="landing-url">/start-trial</div><div class="text-sm text-muted mt-2">Funnel: Trial</div></div><div class="landing-cta">ফ্রি ট্রায়াল শুরু <span class="pill pill-gray">StartTrial</span></div></div>
-<div class="landing-card"><div class="landing-slug">pricing_page</div><div class="landing-info"><div class="landing-url">/pricing</div><div class="text-sm text-muted mt-2">Funnel: Conversion</div></div><div class="landing-cta">Subscribe <span class="pill pill-gray">InitiateCheckout</span></div></div>
-<div class="landing-card"><div class="landing-slug">recovery_pricing</div><div class="landing-info"><div class="landing-url">/come-back</div><div class="text-sm text-muted mt-2">Funnel: Recovery</div></div><div class="landing-cta">Reactivate <span class="pill pill-gray">InitiateCheckout</span></div></div>
-<div class="forbidden-box mt-3"><strong>Build priority:</strong> Build problem_landing + low_friction_signup + pricing_page first. Recovery and trial pages can wait until Pixel Phase 2.</div>
-</div>
-</section>
+    <div style="background:var(--surface);border-radius:var(--radius-lg);padding:14px 16px;box-shadow:var(--shadow);margin-bottom:18px;font-size:13px;color:var(--muted);line-height:1.6;display:flex;gap:10px">
+      <span style="font-size:18px;flex-shrink:0">ℹ️</span>
+      <span>Below are <strong>all events</strong> in the system. Only the <strong>15 Meta events</strong> (visible in the Meta Ad Events tab) are sent to Meta. Everything else stays internal for operational and business intelligence purposes.</span>
+    </div>
 
-<section class="section" id="tracking">
-<div class="card">
-<div class="card-header"><div class="card-header-left"><div class="card-title"><span>📡</span>7. Tracking — must be live before scaling</div><div class="card-subtitle">Pixel events and internal-only events</div></div></div>
-<div style="font-weight:700;font-size:14px;margin-bottom:10px;">Pixel Events (Meta optimization)</div>
-<div class="table-wrap"><table>
-<thead><tr><th>Event</th><th>Trigger</th></tr></thead>
-<tbody>
-<tr><td><strong>PageView</strong></td><td>Every page</td></tr>
-<tr><td><strong>ViewContent</strong></td><td>problem_landing scroll past 50%</td></tr>
-<tr><td><strong>CompleteRegistration</strong></td><td>Signup success</td></tr>
-<tr><td><strong>StartTrial</strong></td><td>Trial activation success</td></tr>
-<tr><td><strong>InitiateCheckout</strong></td><td>Pricing → checkout button</td></tr>
-<tr><td><strong>Purchase</strong></td><td>Paid (value=699 or 4599, currency=BDT)</td></tr>
-</tbody>
-</table></div>
-<div style="font-weight:700;font-size:14px;margin:24px 0 10px;">Internal-Only Events <span class="pill pill-red">NEVER as Meta optimization — FUN-10</span></div>
-<div class="table-wrap"><table><tbody><tr><td>fraud_panel_viewed</td></tr><tr><td>dashboard_seeded_viewed</td></tr><tr><td>financial_impact_seen</td></tr></tbody></table></div>
-<div class="mt-3 text-sm text-muted"><strong>CAPI:</strong> at L1, Pixel-only is acceptable. Add CAPI when promoting to L2.</div>
-</div>
-</section>
+    <div class="filter-row">
+      <button class="filter-btn on" onclick="filterLayer('all',this)">🔍 All layers</button>
+      <button class="filter-btn" onclick="filterLayer('platform',this)">🏢 Platform</button>
+      <button class="filter-btn" onclick="filterLayer('tenant',this)">🛒 Store</button>
+      <button class="filter-btn" onclick="filterLayer('fraud',this)">🛡️ Fraud</button>
+    </div>
 
-<section class="section" id="routine">
-<div class="card">
-<div class="card-header"><div class="card-header-left"><div class="card-title"><span>🔄</span>8. Daily Operator Routine</div><div class="card-subtitle">L1 = no auto-execute (10–15 min morning)</div></div></div>
-<div class="timeline">
-<div class="timeline-item"><div class="timeline-time">Step 1</div><div class="timeline-text">Check 3 campaigns spend vs cap <span class="text-muted">(HC-1: ৳3k/day max Phase 1)</span></div></div>
-<div class="timeline-item"><div class="timeline-time">Step 2</div><div class="timeline-text">Check funnel events: Acquisition CTR/Reg rate, Trial Reg→StartTrial, Conversion StartTrial→Purchase</div></div>
-<div class="timeline-item"><div class="timeline-time">Step 3</div><div class="timeline-text">If <span class="pill pill-red">RED</span> on any funnel → <strong>PAUSE</strong> that campaign, do not "fix by adding budget"</div></div>
-<div class="timeline-item"><div class="timeline-time">Step 4</div><div class="timeline-text">If Acquisition CTR fine but Reg rate &lt;2% → landing problem, not ad problem</div></div>
-<div class="timeline-item"><div class="timeline-time">Step 5</div><div class="timeline-text">Pixel phase check: CompleteRegistration events last 7d. &lt;50 = still Phase 1. ≥50 = promote Phase 2.</div></div>
-</div>
-<div style="margin-top:20px;padding:16px;border:1px solid var(--border);border-radius:8px;background:#fafbfc;">
-<strong>Every Friday:</strong>
-<ul style="margin:8px 0 0 18px;font-size:13px;color:var(--text-sec);">
-<li>Refresh 1–2 cold creatives if frequency &gt;3.5</li>
-<li>Review if ৳3k/day still appropriate (BUD-FUN-9 — never spend &gt;30% of available cash)</li>
-</ul>
-</div>
-</div>
-</section>
+    <div class="events-list" id="layer-list"></div>
+  </div>
 
-<section class="section" id="gate">
-<div class="card">
-<div class="card-header"><div class="card-header-left"><div class="card-title"><span>🚪</span>9. Gate to L2</div><div class="card-subtitle">Promote when ALL true for 7+ days</div></div></div>
-<ul class="checklist">
-<li><span class="check check-done">✓</span><div><strong>Pixel Phase 2</strong><div class="text-muted text-sm">50–200 CompleteRegistration events trusted</div></div></li>
-<li><span class="check check-done">✓</span><div><strong>At least 1 paying customer</strong><div class="text-muted text-sm">Validates Conversion path end-to-end</div></div></li>
-<li><span class="check check-done">✓</span><div><strong>Conversion CR measurable</strong><div class="text-muted text-sm">StartTrial → Purchase rate, even if low</div></div></li>
-<li><span class="check check-done">✓</span><div><strong>Event quality clean</strong><div class="text-muted text-sm">No duplicates, no broken pages (operator confirms)</div></div></li>
-</ul>
-<div class="mt-3" style="padding:12px 16px;background:var(--success-light);border-radius:8px;color:#065f46;font-size:13px;"><strong>Promotion to L2 unlocks:</strong> paid Activation funnel, defensive auto-execute, segmented Recovery, fortnightly creative refresh.</div>
-</div>
-</section>
+  <!-- ═══════ JOURNEY ═══════ -->
+  <div id="panel-journey" class="panel">
 
-<section class="section" id="dont">
-<div class="card">
-<div class="card-header"><div class="card-header-left"><div class="card-title"><span>🚫</span>10. Hard "Don't Do" List</div><div class="card-subtitle">Anti-patterns from FUN rules</div></div></div>
-<ul class="checklist">
-<li><span class="check check-x">✗</span><div>Run paid Activation campaigns at L1 — burns budget on weak signal</div></li>
-<li><span class="check check-x">✗</span><div>Set fraud_panel_viewed as Meta optimization event (FUN-10)</div></li>
-<li><span class="check check-x">✗</span><div>Send recovery audience to /signup or trial page (CR-FUN-8)</div></li>
-<li><span class="check check-x">✗</span><div>Cold ad → /pricing landing (FUN-4 alignment break)</div></li>
-<li><span class="check check-x">✗</span><div>Increase Acquisition budget when Conversion is empty/red (FUN-9)</div></li>
-<li><span class="check check-x">✗</span><div>Skip Recovery cap "because audience is hot" (caps are non-negotiable)</div></li>
-<li><span class="check check-x">✗</span><div>Pure-discount Recovery ad (CR-FUN-9)</div></li>
-<li><span class="check check-x">✗</span><div>Spend &gt;30% of available cash, ever (BUD-FUN-9)</div></li>
-<li><span class="check check-x">✗</span><div>Mix legacy plans (starter/business/premium) into ads — promote v2_monthly + v2_yearly only</div></li>
-</ul>
-</div>
-</section>
+    <!-- Step 1 -->
+    <div class="journey-section">
+      <div class="journey-step-header">
+        <div class="journey-num">1</div>
+        <div class="journey-step-title">Signup &amp; Onboarding</div>
+      </div>
+      <div class="journey-card">
+        <div class="journey-flow">
+          <div class="jf-row">
+            <div class="jf-node gray">👤 New visitor</div>
+            <span class="jf-arrow">→</span>
+            <div class="jf-node blue">📝 user.registered fires</div>
+            <span class="jf-arrow">→</span>
+            <div class="jf-node green">✅ CompleteRegistration → Meta</div>
+          </div>
+          <div class="jf-row" style="padding-left:20px">
+            <div class="jf-node gray">⏳ X days pass, no store setup</div>
+            <span class="jf-arrow">→</span>
+            <div class="jf-node orange">⏰ Cron fires: registered_no_onboarding → Meta</div>
+          </div>
+        </div>
+      </div>
+    </div>
 
-<section class="section" id="actions">
-<div class="card">
-<div class="card-header"><div class="card-header-left"><div class="card-title"><span>✅</span>11. First-Week Action Items</div><div class="card-subtitle">In execution order</div></div></div>
-<ul class="checklist">
-<li><span class="check check-wait">1</span><div><strong>Day 1:</strong> Confirm Pixel + standard events fire correctly on every landing</div></li>
-<li><span class="check check-wait">2</span><div><strong>Day 1:</strong> Build/verify problem_landing (Acquisition) — Bangla, mobile-first</div></li>
-<li><span class="check check-wait">3</span><div><strong>Day 2:</strong> Launch CAMPAIGN 1 (ASC Acquisition) — 3 creatives × 1 ad set. Daily ৳1,500–2,000 if Phase 0; ৳2,250 if Phase 1</div></li>
-<li><span class="check check-wait">4</span><div><strong>Day 3:</strong> Launch CAMPAIGN 2 (Conversion retargeting) — ৳600/day, ViewContent opt</div></li>
-<li><span class="check check-wait">5</span><div><strong>Day 5:</strong> Add CAMPAIGN 3 (Recovery) only if any trial_extended audience exists</div></li>
-<li><span class="check check-wait">6</span><div><strong>Day 7:</strong> First weekly review — funnel health check, refresh weakest creative</div></li>
-<li><span class="check check-wait">7</span><div><strong>Day 14:</strong> Pixel phase recheck → if Phase 2 unlocked, switch optimization to StartTrial</div></li>
-</ul>
-</div>
-</section>
+    <!-- Step 2 -->
+    <div class="journey-section">
+      <div class="journey-step-header">
+        <div class="journey-num">2</div>
+        <div class="journey-step-title">Trial Period &amp; Value Discovery</div>
+      </div>
+      <div class="journey-card">
+        <div class="journey-flow">
+          <div class="jf-row">
+            <div class="jf-node orange">⏳ trial.started</div>
+            <span class="jf-arrow">→</span>
+            <div class="jf-node green">✅ Subscribe → Meta</div>
+          </div>
+          <div class="jf-row">
+            <div class="jf-node blue">💡 Seller sees revenue projection screen</div>
+            <span class="jf-arrow">→</span>
+            <div class="jf-node green">✅ financial_impact_seen → Meta</div>
+          </div>
+          <div class="jf-row" style="padding-left:20px">
+            <div class="jf-node gray">⏱️ Trial ends, no subscription</div>
+            <span class="jf-arrow">→</span>
+            <div class="jf-node orange">⏰ trial_expired → Meta</div>
+          </div>
+          <div class="jf-row" style="padding-left:20px">
+            <div class="jf-node gray">📦 Trial ended, 0 orders received</div>
+            <span class="jf-arrow">→</span>
+            <div class="jf-node orange">⏰ trial_no_purchase → Meta</div>
+          </div>
+          <div class="jf-row" style="padding-left:20px">
+            <div class="jf-node gray">💤 Saw value, then went quiet</div>
+            <span class="jf-arrow">→</span>
+            <div class="jf-node orange">⏰ dormant_post_impact → Meta</div>
+          </div>
+          <div class="jf-row" style="padding-left:20px">
+            <div class="jf-node gray">💡 Saw value, never started trial</div>
+            <span class="jf-arrow">→</span>
+            <div class="jf-node orange">⏰ impact_seen_no_trial → Meta</div>
+          </div>
+        </div>
+      </div>
+    </div>
 
-</div>
-</main>
-</div>
+    <!-- Step 3 -->
+    <div class="journey-section">
+      <div class="journey-step-header">
+        <div class="journey-num">3</div>
+        <div class="journey-step-title">First Real Order — The Critical Moment</div>
+      </div>
+      <div class="journey-card">
+        <div class="journey-flow">
+          <div class="jf-row">
+            <div class="jf-node blue">🛒 order.created</div>
+            <span class="jf-arrow">→</span>
+            <div class="jf-node red">🛡️ fraud.scored (every order)</div>
+          </div>
+          <div class="jf-row" style="padding-left:20px">
+            <div class="jf-node green">✅ fraud.clean</div>
+            <span class="jf-arrow">→</span>
+            <div class="jf-node green">✅ Purchase → Meta (real signal)</div>
+          </div>
+          <div class="jf-row" style="padding-left:20px">
+            <div class="jf-node red">🚫 fraud.fraud_order / hard_block</div>
+            <span class="jf-arrow">→</span>
+            <div class="jf-node gray">🔕 Purchase suppressed — Meta not notified</div>
+          </div>
+          <div class="jf-row" style="padding-left:20px">
+            <div class="jf-node orange">⚠️ fraud.review (medium risk)</div>
+            <span class="jf-arrow">→</span>
+            <div class="jf-node gray">🔍 Flagged for manual review</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Step 4 — Trigger views -->
+    <div class="journey-section">
+      <div class="journey-step-header">
+        <div class="journey-num">4</div>
+        <div class="journey-step-title">Trigger View Events — What screen did they see?</div>
+      </div>
+      <div class="journey-card">
+        <p style="font-size:12px;color:var(--muted);margin-bottom:12px">These fire automatically in the browser the moment a specific screen loads. They let Meta know what emotional/motivational frame the user was shown.</p>
+        <div class="journey-flow">
+          <div class="jf-row">
+            <div class="jf-node red">😰 "You're losing money" banner shown</div>
+            <span class="jf-arrow">→</span>
+            <div class="jf-node blue">loss_reminder_shown → Meta</div>
+          </div>
+          <div class="jf-row">
+            <div class="jf-node orange">🎯 "Here's what you missed" screen shown</div>
+            <span class="jf-arrow">→</span>
+            <div class="jf-node blue">missed_value_shown → Meta</div>
+          </div>
+          <div class="jf-row">
+            <div class="jf-node green">💰 "You saved this much" screen shown</div>
+            <span class="jf-arrow">→</span>
+            <div class="jf-node blue">saved_value_reminder_shown → Meta</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- end journey -->
+</div><!-- end main -->
+
+<script>
+const META = [
+  {name:'CompleteRegistration',type:'core',icon:'📝',plain:'User signs up',
+   when:'The moment someone creates an account on the platform',
+   fires:'Browser pixel + server CAPI (both simultaneously)',
+   why:'Tells Meta who just signed up so it can find similar users',
+   action:'Retarget people who signed up but haven\'t started a trial. Build lookalike audiences from your best converters.'},
+  {name:'Subscribe',type:'core',icon:'⏳',plain:'Trial activated',
+   when:'A seller activates their free trial (3 days or 25 orders)',
+   fires:'Browser pixel + server CAPI',
+   why:'Subscription/trial start is a strong intent signal for Meta optimization',
+   action:'Optimize ad delivery toward people likely to start trials. This is your mid-funnel conversion signal.'},
+  {name:'Purchase',type:'core',icon:'💰',plain:'Real paid order placed (fraud-verified)',
+   when:'A customer places an order AND the fraud layer approves it',
+   fires:'Browser pixel + server CAPI — ONLY if fraud check passes',
+   why:'The main revenue signal. Only clean orders fire this, keeping Meta\'s data high quality',
+   action:'Primary optimization event. Meta uses this to find you more sellers who will get real orders. Never fired for fraudulent orders.'},
+  {name:'financial_impact_seen',type:'core',icon:'💡',plain:'Seller views their revenue potential screen',
+   when:'Seller views the screen that shows their projected or actual financial impact',
+   fires:'Browser pixel + server CAPI',
+   why:'High-intent signal — they engaged with a value proposition screen',
+   action:'Custom audience of people who saw value but didn\'t convert. Strong signal for retargeting with pricing or success stories.'},
+  {name:'trial_expired',type:'gap',icon:'⏱️',plain:'Trial ended without subscribing',
+   when:'Trial period ends (time up or 25 orders hit) without the seller subscribing',
+   fires:'Server cron job only (subscriptionRenewal.job.js)',
+   why:'Identifies users who slipped through at the critical trial→paid moment',
+   action:'Urgent re-engagement. Target with "Your trial ended" messaging. High-value audience — they tried the product.'},
+  {name:'impact_seen_no_trial',type:'gap',icon:'🎯',plain:'Saw value, never started trial',
+   when:'User saw the financial impact screen but never activated a trial',
+   fires:'Server cron job only (behavioralSignals.job.js)',
+   why:'Warm audience — they considered it but didn\'t commit. Fired once per day per user.',
+   action:'Retarget with social proof or trial offer. They were interested enough to view value but had friction.'},
+  {name:'trial_no_purchase',type:'gap',icon:'📦',plain:'Had trial, zero orders received',
+   when:'Trial ended without the seller receiving any customer orders',
+   fires:'Server cron job only (behavioralSignals.job.js)',
+   why:'These users tested the platform but never proved it works for their business',
+   action:'Re-engage with "how to get your first order" content or success story ads.'},
+  {name:'registered_no_onboarding',type:'gap',icon:'🔧',plain:'Signed up but never set up store',
+   when:'Account created but onboarding steps not completed after a defined window',
+   fires:'Server cron job only (behavioralSignals.job.js)',
+   why:'Highest-volume drop-off point — catches people who lost momentum immediately after signup',
+   action:'Onboarding nudge ads. "You\'re 3 steps away from your store" messaging. Biggest opportunity for volume.'},
+  {name:'dormant_post_impact',type:'gap',icon:'💤',plain:'Went quiet after seeing value',
+   when:'User saw the financial impact screen, then became inactive for a defined period',
+   fires:'Server cron job only (behavioralSignals.job.js)',
+   why:'They were close — they saw the value — but something stopped them',
+   action:'Win-back campaign. Use "You saw this 7 days ago…" framing. These users just need a push.'},
+  {name:'loss_reminder_shown',type:'view',icon:'😰',plain:'"You\'re losing money" banner appeared',
+   when:'A screen showing the user\'s lost revenue or missed opportunity loads in the browser',
+   fires:'Browser only (on component mount)',
+   why:'Records which users saw loss-framing so Meta can segment them separately',
+   action:'Build a segment of "loss-framed" users to test against "gain-framed" users for creative testing.'},
+  {name:'missed_value_shown',type:'view',icon:'😟',plain:'"Here\'s what you missed" screen appeared',
+   when:'Screen showing missed earnings or missed features loads for the user',
+   fires:'Browser only (on component mount)',
+   why:'Tracks exposure to the "missed opportunity" motivational frame',
+   action:'Retarget with aspiration-based ads. These users have been primed to think about what they\'re missing.'},
+  {name:'saved_value_reminder_shown',type:'view',icon:'💎',plain:'"Here\'s what you saved" screen appeared',
+   when:'Screen showing the money or effort the user has saved via the platform loads',
+   fires:'Browser only (on component mount)',
+   why:'Tracks exposure to positive reinforcement / social proof framing',
+   action:'Use for upsell or testimonial-style ad targeting. These users have been shown a positive outcome.'},
+];
+
+const LAYERS = [
+  {name:'user.registered',layer:'platform',icon:'📝',plain:'New account created'},
+  {name:'user.email_verified',layer:'platform',icon:'✉️',plain:'Email confirmation clicked'},
+  {name:'user.login_success',layer:'platform',icon:'🔑',plain:'Seller logged in successfully'},
+  {name:'user.login_failed',layer:'platform',icon:'🚫',plain:'Wrong credentials / account inactive'},
+  {name:'user.password_reset',layer:'platform',icon:'🔒',plain:'Reset password email sent'},
+  {name:'user.activated / deactivated',layer:'platform',icon:'👤',plain:'Admin enables or disables an account'},
+  {name:'user.deleted',layer:'platform',icon:'🗑️',plain:'Admin permanently removes a user'},
+  {name:'website.created',layer:'platform',icon:'🌐',plain:'New storefront created during onboarding'},
+  {name:'website.enabled / disabled',layer:'platform',icon:'🔔',plain:'Store goes live or taken offline by admin'},
+  {name:'website.deployed',layer:'platform',icon:'🚀',plain:'Latest store config pushed to live'},
+  {name:'website.template_assigned',layer:'platform',icon:'🎨',plain:'Design template linked to store'},
+  {name:'subscription.created',layer:'platform',icon:'💳',plain:'Plan activated for the first time'},
+  {name:'subscription.upgraded / downgraded',layer:'platform',icon:'📈',plain:'Plan tier changed up or down'},
+  {name:'subscription.cancelled',layer:'platform',icon:'❌',plain:'Plan cancelled, ends at billing boundary'},
+  {name:'subscription.renewed / expired',layer:'platform',icon:'🔄',plain:'Plan auto-renewed or expired without renewal'},
+  {name:'trial.started',layer:'platform',icon:'⏳',plain:'Free trial activated (3 days or 25 orders)'},
+  {name:'trial.expired',layer:'platform',icon:'⏱️',plain:'Trial time ended or 25-order limit hit'},
+  {name:'payment.created',layer:'platform',icon:'💳',plain:'Payment attempt initiated'},
+  {name:'payment.success / failed',layer:'platform',icon:'💰',plain:'Payment confirmed or rejected by gateway'},
+  {name:'payment.refunded',layer:'platform',icon:'↩️',plain:'Admin reverses a payment'},
+  {name:'domain.created',layer:'platform',icon:'🌍',plain:'Custom domain added to account'},
+  {name:'domain.dns_verified',layer:'platform',icon:'✅',plain:'DNS records confirmed pointing correctly'},
+  {name:'domain.ssl_provisioned',layer:'platform',icon:'🔐',plain:'HTTPS certificate issued via Caddy ACME'},
+  {name:'domain.activated',layer:'platform',icon:'🟢',plain:'Custom domain fully live and serving traffic'},
+  {name:'product.created / updated / deleted',layer:'tenant',icon:'📦',plain:'Seller manages their product catalog'},
+  {name:'order.created',layer:'tenant',icon:'🛒',plain:'Customer places an order'},
+  {name:'order.confirmed',layer:'tenant',icon:'👍',plain:'Seller confirms and accepts the order'},
+  {name:'order.processing',layer:'tenant',icon:'⚙️',plain:'Order is being prepared / packed'},
+  {name:'order.shipped',layer:'tenant',icon:'🚚',plain:'Order handed to courier for delivery'},
+  {name:'order.delivered',layer:'tenant',icon:'📬',plain:'Courier confirms successful delivery'},
+  {name:'order.returned / cancelled',layer:'tenant',icon:'↩️',plain:'Order returned by courier or cancelled'},
+  {name:'order.manual_created',layer:'tenant',icon:'✍️',plain:'Seller creates order manually (not from storefront)'},
+  {name:'delivery.created',layer:'tenant',icon:'📋',plain:'Consignment data sent to courier API'},
+  {name:'delivery.bulk_created',layer:'tenant',icon:'📋',plain:'Multiple consignments sent at once'},
+  {name:'delivery.status_updated',layer:'tenant',icon:'📡',plain:'Courier pushes a new status via webhook'},
+  {name:'delivery.cancelled / returned',layer:'tenant',icon:'🔙',plain:'Consignment cancelled or package returned'},
+  {name:'integration.connected',layer:'tenant',icon:'🔗',plain:'Courier credentials validated and linked'},
+  {name:'integration.disconnected',layer:'tenant',icon:'🔌',plain:'Courier integration removed'},
+  {name:'site_settings.updated',layer:'tenant',icon:'⚙️',plain:'Seller changes store configuration'},
+  {name:'fraud.scored',layer:'fraud',icon:'🧮',plain:'Every order receives a composite risk score'},
+  {name:'fraud.clean',layer:'fraud',icon:'✅',plain:'Order passes all fraud checks'},
+  {name:'fraud.review',layer:'fraud',icon:'🔍',plain:'Medium-risk order flagged for manual review'},
+  {name:'fraud.fraud_order',layer:'fraud',icon:'⚠️',plain:'High-risk order detected and flagged'},
+  {name:'fraud.silent_fraud',layer:'fraud',icon:'🤫',plain:'Silently suppressed (seller not told)'},
+  {name:'fraud.hard_block',layer:'fraud',icon:'🚫',plain:'Hard block applied — order fully rejected'},
+  {name:'fraud.purchase_suppressed',layer:'fraud',icon:'🔕',plain:'Purchase event blocked from firing to Meta'},
+  {name:'fraud.purchase_allowed',layer:'fraud',icon:'📣',plain:'Purchase event allowed to fire to Meta'},
+  {name:'fraud.actor_blocked',layer:'fraud',icon:'🚷',plain:'Phone number or IP address permanently banned'},
+  {name:'fraud.otp_blocked',layer:'fraud',icon:'📵',plain:'Unverified phone blocked at checkout (403)'},
+  {name:'fraud.duplicate_detected',layer:'fraud',icon:'👥',plain:'Same phone used twice within a time window'},
+  {name:'fraud.community_bl_match',layer:'fraud',icon:'📋',plain:'Phone matches community blacklist — score 100%'},
+  {name:'fraud.escalation_created',layer:'fraud',icon:'📤',plain:'Reviewable order sent to fraud review queue'},
+  {name:'fraud.event_reviewed',layer:'fraud',icon:'📝',plain:'Fraud event marked as real or false positive'},
+];
+
+let metaFilter='all', layerFilter='all';
+
+const TYPE_META = {
+  core:{label:'Core',icon:'⭐',cls:'badge-core',color:'#047857',bg:'#ECFDF5',iconBg:'#D1FAE5'},
+  gap:{label:'Gap / Cron',icon:'⏰',cls:'badge-gap',color:'#B45309',bg:'#FFFBEB',iconBg:'#FDE68A'},
+  view:{label:'Trigger View',icon:'👁️',cls:'badge-view',color:'#1D4ED8',bg:'#EFF6FF',iconBg:'#BFDBFE'},
+};
+const LAYER_META = {
+  platform:{label:'Platform',cls:'badge-platform',iconBg:'#EFF6FF'},
+  tenant:{label:'Store',cls:'badge-tenant',iconBg:'#ECFDF5'},
+  fraud:{label:'Fraud',cls:'badge-fraud',iconBg:'#FEF2F2'},
+};
+
+function renderMeta(){
+  const list = document.getElementById('meta-list');
+  const shown = META.filter(e => metaFilter==='all' || e.type===metaFilter);
+  if(!shown.length){list.innerHTML='<div class="empty">No events for this filter</div>';return;}
+  list.innerHTML = shown.map((e,i) => {
+    const tm = TYPE_META[e.type];
+    return `<div class="ev-card" id="mc${i}">
+      <div class="ev-header" onclick="toggleCard('mc${i}')">
+        <div class="ev-type-icon" style="background:${tm.iconBg}">${e.icon}</div>
+        <div class="ev-name">${e.name}</div>
+        <div class="ev-plain">${e.plain}</div>
+        <span class="ev-badge ${tm.cls}">${tm.icon} ${tm.label}</span>
+        <span class="ev-chevron">▼</span>
+      </div>
+      <div class="ev-detail">
+        <div class="ev-detail-grid">
+          <div class="ev-detail-box"><div class="ev-dl">⏱ When it fires</div><div class="ev-dv">${e.when}</div></div>
+          <div class="ev-detail-box"><div class="ev-dl">📡 How it fires</div><div class="ev-dv">${e.fires}</div></div>
+          <div class="ev-detail-box"><div class="ev-dl">🎯 Why Meta gets this</div><div class="ev-dv">${e.why}</div></div>
+        </div>
+        <div class="ev-action-box"><div class="ev-al">💼 Marketing action</div><div class="ev-av">${e.action}</div></div>
+      </div>
+    </div>`;
+  }).join('');
+}
+
+function renderLayers(){
+  const list = document.getElementById('layer-list');
+  const shown = LAYERS.filter(e => layerFilter==='all' || e.layer===layerFilter);
+  if(!shown.length){list.innerHTML='<div class="empty">No events for this filter</div>';return;}
+  let lastLayer='';
+  list.innerHTML = shown.map(e => {
+    const lm = LAYER_META[e.layer];
+    let header='';
+    if(e.layer!==lastLayer){
+      lastLayer=e.layer;
+      const layerIcons={platform:'🏢',tenant:'🛒',fraud:'🛡️'};
+      const layerNames={platform:'Platform Layer — Business & Account Events',tenant:'Store Layer — Seller & Customer Events',fraud:'Fraud Layer — Risk & Protection Events'};
+      header=`<div style="display:flex;align-items:center;gap:8px;padding:18px 0 8px;font-size:12px;font-weight:600;color:var(--muted);letter-spacing:.06em;text-transform:uppercase">
+        <span>${layerIcons[e.layer]}</span><span>${layerNames[e.layer]}</span>
+      </div>`;
+    }
+    return `${header}<div class="ev-card" style="cursor:default">
+      <div class="ev-header" style="cursor:default">
+        <div class="ev-type-icon" style="background:${lm.iconBg}">${e.icon}</div>
+        <div class="ev-name">${e.name}</div>
+        <div class="ev-plain">${e.plain}</div>
+        <span class="ev-badge ${lm.cls}">${lm.label}</span>
+      </div>
+    </div>`;
+  }).join('');
+}
+
+function toggleCard(id){
+  const el=document.getElementById(id);
+  el.classList.toggle('expanded');
+}
+
+function filterMeta(f,btn){
+  metaFilter=f;
+  document.querySelectorAll('#panel-meta .filter-btn').forEach(b=>b.classList.remove('on'));
+  btn.classList.add('on');
+  renderMeta();
+}
+
+function filterLayer(f,btn){
+  layerFilter=f;
+  document.querySelectorAll('#panel-layers .filter-btn').forEach(b=>b.classList.remove('on'));
+  btn.classList.add('on');
+  renderLayers();
+}
+
+function showPanel(id,btn){
+  document.querySelectorAll('.panel').forEach(p=>p.classList.remove('active'));
+  document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));
+  document.getElementById('panel-'+id).classList.add('active');
+  btn.classList.add('active');
+}
+
+renderMeta();
+renderLayers();
+</script>
 </body>
 </html>
