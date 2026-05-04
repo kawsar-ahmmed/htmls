@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-<title>Nextpaz Event Strategy Guide — Marketing Team</title>
+<title>Event Strategy Guide — Marketing Team</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"/>
@@ -15,110 +15,98 @@
   --red:#EF4444;--red-light:#FEF2F2;--red-mid:#FECACA;--red-dark:#B91C1C;
   --orange:#F59E0B;--orange-light:#FFFBEB;--orange-mid:#FDE68A;--orange-dark:#B45309;
   --purple:#8B5CF6;--purple-light:#F5F3FF;--purple-mid:#DDD6FE;--purple-dark:#6D28D9;
+  --teal:#14B8A6;--teal-light:#F0FDFA;--teal-mid:#99F6E4;--teal-dark:#0F766E;
   --gray:#6B7280;--gray-light:#F9FAFB;--gray-mid:#E5E7EB;--gray-dark:#374151;
   --surface:#FFFFFF;--bg:#F3F4F6;--text:#111827;--muted:#6B7280;--border:#E5E7EB;
-  --radius:10px;--radius-lg:16px;--shadow:0 1px 3px rgba(0,0,0,.08),0 1px 2px rgba(0,0,0,.05);
+  --radius:10px;--radius-lg:16px;
+  --shadow:0 1px 3px rgba(0,0,0,.08),0 1px 2px rgba(0,0,0,.05);
   --shadow-md:0 4px 16px rgba(0,0,0,.10),0 2px 6px rgba(0,0,0,.06);
 }
 body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);min-height:100vh;font-size:14px;line-height:1.5}
 
-/* ── HEADER ── */
-.header{background:linear-gradient(135deg,#1E3A5F 0%,#1a3a7a 50%,#2D1B69 100%);color:#fff;padding:36px 32px 28px;position:relative;overflow:hidden}
-.header::before{content:'';position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Ccircle cx='30' cy='30' r='20'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")}
-.header-inner{position:relative;max-width:1000px;margin:auto}
+/* HEADER */
+.header{background:linear-gradient(135deg,#0F2444 0%,#1a3a7a 55%,#2D1B69 100%);color:#fff;padding:36px 32px 28px;position:relative;overflow:hidden}
+.header::before{content:'';position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none'%3E%3Ccircle cx='40' cy='40' r='30' fill='%23ffffff' fill-opacity='0.02'/%3E%3C/g%3E%3C/svg%3E")}
+.header-inner{position:relative;max-width:1060px;margin:auto}
 .header-top{display:flex;align-items:center;gap:14px;margin-bottom:10px}
-.header-icon{width:44px;height:44px;background:rgba(255,255,255,.15);border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:22px;flex-shrink:0}
+.header-icon{width:46px;height:46px;background:rgba(255,255,255,.12);border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:24px;flex-shrink:0;border:1px solid rgba(255,255,255,.15)}
 .header h1{font-size:24px;font-weight:700;letter-spacing:-.3px}
-.header-sub{font-size:13px;color:rgba(255,255,255,.65);margin-top:4px}
+.header-sub{font-size:13px;color:rgba(255,255,255,.6);margin-top:3px}
 .header-badges{display:flex;gap:8px;margin-top:16px;flex-wrap:wrap}
-.h-badge{font-size:11px;font-weight:500;padding:4px 10px;border-radius:20px;background:rgba(255,255,255,.12);color:rgba(255,255,255,.9);border:1px solid rgba(255,255,255,.15)}
+.h-badge{font-size:11px;font-weight:500;padding:4px 10px;border-radius:20px;background:rgba(255,255,255,.1);color:rgba(255,255,255,.85);border:1px solid rgba(255,255,255,.15)}
 
-/* ── MAIN ── */
-.main{max-width:1000px;margin:0 auto;padding:24px 20px 60px}
+/* MAIN */
+.main{max-width:1060px;margin:0 auto;padding:24px 20px 60px}
 
-/* ── TABS ── */
+/* TABS */
 .tabs{display:flex;gap:4px;background:var(--surface);border-radius:var(--radius-lg);padding:5px;box-shadow:var(--shadow);margin-bottom:22px;flex-wrap:wrap}
-.tab{flex:1;min-width:120px;padding:9px 14px;border-radius:8px;font-size:13px;font-weight:500;cursor:pointer;border:none;background:transparent;color:var(--muted);transition:all .18s;display:flex;align-items:center;justify-content:center;gap:6px}
+.tab{flex:1;min-width:110px;padding:9px 10px;border-radius:8px;font-size:12px;font-weight:500;cursor:pointer;border:none;background:transparent;color:var(--muted);transition:all .18s;display:flex;align-items:center;justify-content:center;gap:5px;white-space:nowrap}
 .tab:hover{background:var(--gray-light);color:var(--gray-dark)}
-.tab.active{background:linear-gradient(135deg,#1E3A5F,#2D1B69);color:#fff;box-shadow:0 2px 8px rgba(30,58,95,.35)}
-.tab-icon{font-size:15px}
+.tab.active{background:linear-gradient(135deg,#0F2444,#2D1B69);color:#fff;box-shadow:0 2px 8px rgba(15,36,68,.4)}
+.tab-icon{font-size:14px}
 
-/* ── PANELS ── */
+/* PANELS */
 .panel{display:none;animation:fadeIn .2s ease}
 .panel.active{display:block}
 @keyframes fadeIn{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}
 
-/* ── SECTION TITLE ── */
+/* SECTION */
 .section-label{font-size:11px;font-weight:600;letter-spacing:.07em;text-transform:uppercase;color:var(--muted);margin:0 0 12px}
 
-/* ── LAYER CARDS ── */
+/* LAYER CARDS */
 .layer-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:14px;margin-bottom:24px}
 .layer-card{background:var(--surface);border-radius:var(--radius-lg);padding:20px;box-shadow:var(--shadow);border-top:4px solid transparent;transition:transform .18s,box-shadow .18s}
 .layer-card:hover{transform:translateY(-2px);box-shadow:var(--shadow-md)}
-.layer-card.blue{border-top-color:var(--blue)}
-.layer-card.green{border-top-color:var(--green)}
-.layer-card.red{border-top-color:var(--red)}
+.layer-card.blue{border-top-color:var(--blue)}.layer-card.green{border-top-color:var(--green)}.layer-card.red{border-top-color:var(--red)}
 .lc-head{display:flex;align-items:center;gap:12px;margin-bottom:12px}
 .lc-icon{width:42px;height:42px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0}
-.lc-icon.blue{background:var(--blue-light)}
-.lc-icon.green{background:var(--green-light)}
-.lc-icon.red{background:var(--red-light)}
-.lc-title{font-size:15px;font-weight:600;color:var(--text)}
-.lc-count{font-size:11px;font-weight:500;color:var(--muted);margin-top:1px}
+.lc-icon.blue{background:var(--blue-light)}.lc-icon.green{background:var(--green-light)}.lc-icon.red{background:var(--red-light)}
+.lc-title{font-size:15px;font-weight:600;color:var(--text)}.lc-count{font-size:11px;font-weight:500;color:var(--muted);margin-top:1px}
 .lc-desc{font-size:13px;color:var(--muted);line-height:1.6}
 .lc-tags{display:flex;flex-wrap:wrap;gap:5px;margin-top:12px}
 .lc-tag{font-size:11px;padding:3px 8px;border-radius:6px;font-weight:500}
-.lc-tag.blue{background:var(--blue-light);color:var(--blue-dark)}
-.lc-tag.green{background:var(--green-light);color:var(--green-dark)}
-.lc-tag.red{background:var(--red-light);color:var(--red-dark)}
+.lc-tag.blue{background:var(--blue-light);color:var(--blue-dark)}.lc-tag.green{background:var(--green-light);color:var(--green-dark)}.lc-tag.red{background:var(--red-light);color:var(--red-dark)}
 
-/* ── STATS ── */
+/* STATS */
 .stats-row{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:24px}
 .stat-card{background:var(--surface);border-radius:var(--radius-lg);padding:16px 20px;box-shadow:var(--shadow);text-align:center}
-.stat-num{font-size:32px;font-weight:700;background:linear-gradient(135deg,#1E3A5F,#2D1B69);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.stat-num{font-size:32px;font-weight:700;background:linear-gradient(135deg,#0F2444,#2D1B69);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
 .stat-label{font-size:12px;color:var(--muted);margin-top:3px}
 
-/* ── BIG PICTURE FLOW ── */
+/* FLOW CARD */
 .flow-card{background:var(--surface);border-radius:var(--radius-lg);padding:20px;box-shadow:var(--shadow);margin-bottom:24px}
 .flow-title{font-size:13px;font-weight:600;color:var(--text);margin-bottom:16px;display:flex;align-items:center;gap:6px}
 .flow-steps{display:flex;flex-direction:column;gap:10px}
 .flow-step{display:flex;align-items:flex-start;gap:10px}
 .flow-line{display:flex;flex-direction:column;align-items:center}
-.flow-dot{width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:13px;flex-shrink:0;font-weight:600}
+.flow-dot{width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:12px;flex-shrink:0;font-weight:600}
 .flow-connector{width:2px;flex:1;min-height:12px;margin:2px 0;background:var(--border)}
 .flow-body{flex:1;padding-bottom:4px}
 .flow-step-title{font-size:13px;font-weight:600;color:var(--text);margin-bottom:4px}
 .flow-chips{display:flex;flex-wrap:wrap;gap:5px}
 .chip{font-size:11px;font-weight:500;padding:3px 8px;border-radius:6px;display:inline-flex;align-items:center;gap:4px}
-.chip.blue{background:var(--blue-light);color:var(--blue-dark)}
-.chip.green{background:var(--green-light);color:var(--green-dark)}
-.chip.orange{background:var(--orange-light);color:var(--orange-dark)}
-.chip.red{background:var(--red-light);color:var(--red-dark)}
-.chip.gray{background:var(--gray-light);color:var(--gray-dark);border:1px solid var(--border)}
-.chip.purple{background:var(--purple-light);color:var(--purple-dark)}
+.chip.blue{background:var(--blue-light);color:var(--blue-dark)}.chip.green{background:var(--green-light);color:var(--green-dark)}
+.chip.orange{background:var(--orange-light);color:var(--orange-dark)}.chip.red{background:var(--red-light);color:var(--red-dark)}
+.chip.gray{background:var(--gray-light);color:var(--gray-dark);border:1px solid var(--border)}.chip.purple{background:var(--purple-light);color:var(--purple-dark)}
 
-/* ── FILTER ROW ── */
+/* FILTER */
 .filter-row{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:14px}
 .filter-btn{font-size:12px;font-weight:500;padding:5px 12px;border-radius:20px;border:1.5px solid var(--border);background:var(--surface);color:var(--muted);cursor:pointer;transition:all .15s;display:flex;align-items:center;gap:5px}
 .filter-btn:hover{border-color:var(--blue);color:var(--blue)}
 .filter-btn.on{background:var(--blue);color:#fff;border-color:var(--blue)}
 
-/* ── EVENT CARDS ── */
+/* EVENT CARDS */
 .events-list{display:flex;flex-direction:column;gap:8px}
 .ev-card{background:var(--surface);border-radius:var(--radius);box-shadow:var(--shadow);overflow:hidden;transition:box-shadow .18s;border:1.5px solid transparent}
-.ev-card:hover{box-shadow:var(--shadow-md)}
-.ev-card.expanded{border-color:var(--blue)}
+.ev-card:hover{box-shadow:var(--shadow-md)}.ev-card.expanded{border-color:var(--blue)}
 .ev-header{display:flex;align-items:center;gap:10px;padding:12px 16px;cursor:pointer;user-select:none}
 .ev-type-icon{width:32px;height:32px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:16px;flex-shrink:0}
 .ev-name{font-size:13px;font-weight:600;color:var(--text);flex:1}
 .ev-plain{font-size:12px;color:var(--muted);margin-right:4px}
 .ev-badge{font-size:10px;font-weight:600;padding:3px 8px;border-radius:12px;white-space:nowrap;flex-shrink:0;letter-spacing:.03em;text-transform:uppercase}
-.badge-core{background:var(--green-light);color:var(--green-dark)}
-.badge-gap{background:var(--orange-light);color:var(--orange-dark)}
-.badge-view{background:var(--blue-light);color:var(--blue-dark)}
-.badge-platform{background:var(--blue-light);color:var(--blue-dark)}
-.badge-tenant{background:var(--green-light);color:var(--green-dark)}
-.badge-fraud{background:var(--red-light);color:var(--red-dark)}
+.badge-core{background:var(--green-light);color:var(--green-dark)}.badge-gap{background:var(--orange-light);color:var(--orange-dark)}
+.badge-view{background:var(--blue-light);color:var(--blue-dark)}.badge-platform{background:var(--blue-light);color:var(--blue-dark)}
+.badge-tenant{background:var(--green-light);color:var(--green-dark)}.badge-fraud{background:var(--red-light);color:var(--red-dark)}
 .ev-chevron{font-size:11px;color:var(--muted);transition:transform .2s;flex-shrink:0}
 .ev-card.expanded .ev-chevron{transform:rotate(180deg)}
 .ev-detail{display:none;padding:0 16px 14px;border-top:1px solid var(--border)}
@@ -131,50 +119,140 @@ body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);min-h
 .ev-al{font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:.05em;color:var(--blue-dark);margin-bottom:4px}
 .ev-av{font-size:12px;color:var(--blue-dark);line-height:1.5;font-weight:500}
 
-/* ── LEGEND ── */
+/* LEGEND */
 .legend{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:16px}
 .leg-item{display:flex;align-items:center;gap:6px;font-size:12px;color:var(--muted)}
 .leg-dot{width:10px;height:10px;border-radius:50%}
 
-/* ── JOURNEY ── */
+/* JOURNEY */
 .journey-section{margin-bottom:20px}
 .journey-step-header{display:flex;align-items:center;gap:10px;margin-bottom:12px}
-.journey-num{width:28px;height:28px;background:linear-gradient(135deg,#1E3A5F,#2D1B69);color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;flex-shrink:0}
+.journey-num{width:28px;height:28px;background:linear-gradient(135deg,#0F2444,#2D1B69);color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;flex-shrink:0}
 .journey-step-title{font-size:14px;font-weight:600;color:var(--text)}
 .journey-card{background:var(--surface);border-radius:var(--radius-lg);box-shadow:var(--shadow);padding:16px 18px;margin-bottom:12px}
 .journey-flow{display:flex;flex-direction:column;gap:8px}
 .jf-row{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
 .jf-node{font-size:12px;font-weight:500;padding:5px 10px;border-radius:7px;display:flex;align-items:center;gap:5px}
-.jf-node.blue{background:var(--blue-light);color:var(--blue-dark)}
-.jf-node.green{background:var(--green-light);color:var(--green-dark)}
-.jf-node.orange{background:var(--orange-light);color:var(--orange-dark)}
-.jf-node.red{background:var(--red-light);color:var(--red-dark)}
-.jf-node.gray{background:var(--gray-light);color:var(--gray-dark);border:1px solid var(--border)}
-.jf-node.purple{background:var(--purple-light);color:var(--purple-dark)}
+.jf-node.blue{background:var(--blue-light);color:var(--blue-dark)}.jf-node.green{background:var(--green-light);color:var(--green-dark)}
+.jf-node.orange{background:var(--orange-light);color:var(--orange-dark)}.jf-node.red{background:var(--red-light);color:var(--red-dark)}
+.jf-node.gray{background:var(--gray-light);color:var(--gray-dark);border:1px solid var(--border)}.jf-node.purple{background:var(--purple-light);color:var(--purple-dark)}
 .jf-arrow{font-size:14px;color:var(--muted);flex-shrink:0}
-.jf-note{font-size:11px;color:var(--muted);font-style:italic;margin-left:2px}
 
-/* ── SUPPRESSION EXPLAINER ── */
+/* SUPPRESS BOX */
 .suppress-box{background:linear-gradient(135deg,var(--red-light),var(--orange-light));border:1px solid var(--red-mid);border-radius:var(--radius-lg);padding:18px 20px;margin-top:16px}
 .suppress-title{font-size:13px;font-weight:600;color:var(--red-dark);margin-bottom:10px;display:flex;align-items:center;gap:6px}
-.suppress-row{display:flex;align-items:center;gap:10px;margin-bottom:8px}
+.suppress-row{display:flex;align-items:flex-start;gap:10px;margin-bottom:8px;flex-wrap:wrap}
 .suppress-row:last-child{margin-bottom:0}
-.sup-label{font-size:12px;font-weight:600;padding:4px 10px;border-radius:6px;min-width:90px;text-align:center}
+.sup-label{font-size:12px;font-weight:600;padding:4px 10px;border-radius:6px;white-space:nowrap}
 .sup-desc{font-size:12px;color:var(--gray-dark)}
-.sup-out{font-size:12px;font-weight:600;padding:4px 10px;border-radius:6px;margin-left:auto}
 
-/* ── EMPTY ── */
+/* ═══ META STRATEGY STYLES ═══ */
+.ms-hero{background:linear-gradient(135deg,#0F2444 0%,#1a3a7a 60%,#2D1B69 100%);border-radius:var(--radius-lg);padding:24px 26px;margin-bottom:22px;color:#fff}
+.ms-hero-label{font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:rgba(255,255,255,.5);margin-bottom:6px}
+.ms-hero-title{font-size:19px;font-weight:700;margin-bottom:8px;line-height:1.3}
+.ms-hero-desc{font-size:13px;color:rgba(255,255,255,.7);line-height:1.6;max-width:680px}
+
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:22px}
+@media(max-width:640px){.two-col{grid-template-columns:1fr}}
+.layer-box{border-radius:var(--radius-lg);padding:18px;box-shadow:var(--shadow)}
+.layer-box.optimizer{background:linear-gradient(145deg,#EFF6FF,#F5F3FF);border:1.5px solid var(--blue-mid)}
+.layer-box.audience{background:linear-gradient(145deg,#ECFDF5,#FFFBEB);border:1.5px solid var(--green-mid)}
+.lb-header{display:flex;align-items:center;gap:10px;margin-bottom:12px}
+.lb-badge{font-size:10px;font-weight:700;padding:3px 8px;border-radius:10px;letter-spacing:.05em;text-transform:uppercase}
+.lb-badge.opt{background:var(--blue-dark);color:#fff}.lb-badge.aud{background:var(--green-dark);color:#fff}
+.lb-icon{font-size:22px}
+.lb-title{font-size:14px;font-weight:700;color:var(--text)}
+.lb-subtitle{font-size:12px;color:var(--muted);margin-top:1px}
+.lb-bullets{list-style:none;display:flex;flex-direction:column;gap:6px}
+.lb-bullets li{font-size:12px;color:var(--gray-dark);display:flex;align-items:flex-start;gap:7px;line-height:1.5}
+.lb-bullets li::before{content:'';display:block;width:6px;height:6px;border-radius:50%;flex-shrink:0;margin-top:5px}
+.layer-box.optimizer .lb-bullets li::before{background:var(--blue)}
+.layer-box.audience .lb-bullets li::before{background:var(--green)}
+
+.event-deep-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:14px;margin-bottom:22px}
+.edg-card{background:var(--surface);border-radius:var(--radius-lg);box-shadow:var(--shadow);overflow:hidden}
+.edg-top{padding:16px 18px 14px;border-bottom:1px solid var(--border)}
+.edg-icon-row{display:flex;align-items:center;gap:10px;margin-bottom:10px}
+.edg-icon{width:38px;height:38px;border-radius:9px;display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0}
+.edg-event{font-size:13px;font-weight:700;color:var(--text)}
+.edg-stage{font-size:11px;font-weight:500;padding:2px 7px;border-radius:8px;display:inline-block;margin-top:2px}
+.edg-desc{font-size:12px;color:var(--muted);line-height:1.55}
+.edg-body{padding:12px 18px;display:flex;flex-direction:column;gap:8px}
+.edg-row{display:flex;gap:8px;align-items:flex-start}
+.edg-label{font-size:10px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;color:var(--muted);min-width:72px;margin-top:1px}
+.edg-val{font-size:12px;color:var(--text);line-height:1.45;flex:1}
+.edg-action{background:linear-gradient(135deg,#EFF6FF,#F5F3FF);border-radius:8px;padding:9px 11px;margin:4px 0 0}
+.edg-action-label{font-size:10px;font-weight:600;text-transform:uppercase;color:var(--blue-dark);letter-spacing:.04em;margin-bottom:3px}
+.edg-action-val{font-size:12px;color:var(--blue-dark);font-weight:500;line-height:1.45}
+
+/* CUSTOM AUDIENCE TABLE */
+.ca-table-wrap{background:var(--surface);border-radius:var(--radius-lg);box-shadow:var(--shadow);overflow:hidden;margin-bottom:22px}
+.ca-table-head{background:linear-gradient(135deg,#0F2444,#1a3a7a);padding:14px 18px;display:grid;grid-template-columns:1.6fr 1.4fr 1.8fr;gap:12px}
+.ca-th{font-size:10px;font-weight:600;letter-spacing:.07em;text-transform:uppercase;color:rgba(255,255,255,.6)}
+.ca-row{display:grid;grid-template-columns:1.6fr 1.4fr 1.8fr;gap:12px;padding:11px 18px;border-bottom:1px solid var(--border);align-items:start;transition:background .15s}
+.ca-row:last-child{border-bottom:none}
+.ca-row:hover{background:var(--gray-light)}
+.ca-event{font-size:12px;font-weight:600;color:var(--text);display:flex;align-items:center;gap:6px}
+.ca-audience{font-size:12px;color:var(--gray-dark)}
+.ca-use{font-size:12px;color:var(--blue-dark);font-weight:500}
+
+/* FULL FUNNEL */
+.funnel-card{background:var(--surface);border-radius:var(--radius-lg);box-shadow:var(--shadow);padding:20px 22px;margin-bottom:22px}
+.funnel-title{font-size:14px;font-weight:700;color:var(--text);margin-bottom:16px;display:flex;align-items:center;gap:8px}
+.funnel-stages{display:flex;flex-direction:column;gap:0}
+.fs{display:flex;gap:14px;align-items:flex-start;padding:14px 0;border-bottom:1px dashed var(--border)}
+.fs:last-child{border-bottom:none}
+.fs-left{display:flex;flex-direction:column;align-items:center;gap:0;min-width:34px}
+.fs-num{width:34px;height:34px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;flex-shrink:0}
+.fs-line{width:2px;flex:1;min-height:20px;margin:4px 0;background:var(--border)}
+.fs-body{flex:1;padding-bottom:6px}
+.fs-stage{font-size:11px;font-weight:600;letter-spacing:.05em;text-transform:uppercase;margin-bottom:4px}
+.fs-name{font-size:14px;font-weight:700;color:var(--text);margin-bottom:6px}
+.fs-desc{font-size:12px;color:var(--muted);line-height:1.55;margin-bottom:8px}
+.fs-chips{display:flex;flex-wrap:wrap;gap:5px}
+
+/* CONTENT 70/20/10 */
+.split-rule{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;margin-bottom:22px}
+.sr-card{border-radius:var(--radius-lg);padding:18px;box-shadow:var(--shadow)}
+.sr-card.l1{background:linear-gradient(145deg,#ECFDF5,#D1FAE5);border:1.5px solid var(--green-mid)}
+.sr-card.l2{background:linear-gradient(145deg,#FFFBEB,#FDE68A44);border:1.5px solid var(--orange-mid)}
+.sr-card.l3{background:linear-gradient(145deg,#F5F3FF,#DDD6FE44);border:1.5px solid var(--purple-mid)}
+.sr-pct{font-size:36px;font-weight:700;line-height:1}
+.sr-pct.l1{color:var(--green-dark)}.sr-pct.l2{color:var(--orange-dark)}.sr-pct.l3{color:var(--purple-dark)}
+.sr-event{font-size:11px;font-weight:600;padding:2px 7px;border-radius:6px;margin:6px 0 8px;display:inline-block}
+.sr-event.l1{background:var(--green-light);color:var(--green-dark)}.sr-event.l2{background:var(--orange-light);color:var(--orange-dark)}.sr-event.l3{background:var(--purple-light);color:var(--purple-dark)}
+.sr-theme{font-size:13px;font-weight:600;color:var(--text);margin-bottom:5px}
+.sr-trigger{font-size:12px;color:var(--muted);margin-bottom:8px}
+.sr-examples{list-style:none;display:flex;flex-direction:column;gap:5px}
+.sr-examples li{font-size:11px;color:var(--gray-dark);display:flex;gap:5px;line-height:1.4}
+.sr-examples li::before{content:'→';color:var(--muted);flex-shrink:0}
+
+/* COMPOUND LOOP */
+.loop-card{background:linear-gradient(145deg,#0F2444,#1a3a7a);border-radius:var(--radius-lg);padding:22px;margin-bottom:22px;color:#fff}
+.loop-title{font-size:14px;font-weight:700;color:#fff;margin-bottom:16px;display:flex;align-items:center;gap:8px}
+.loop-steps{display:flex;flex-direction:column;gap:2px}
+.loop-step{display:flex;gap:12px;align-items:flex-start;padding:10px 12px;border-radius:9px;transition:background .15s}
+.loop-step:hover{background:rgba(255,255,255,.07)}
+.loop-step-icon{width:30px;height:30px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:14px;flex-shrink:0}
+.loop-step-body{flex:1}
+.loop-step-title{font-size:12px;font-weight:600;color:rgba(255,255,255,.9);margin-bottom:2px}
+.loop-step-desc{font-size:11px;color:rgba(255,255,255,.5);line-height:1.45}
+.loop-divider{width:2px;height:12px;background:rgba(255,255,255,.12);margin:0 0 0 27px}
+.loop-result{display:flex;gap:10px;margin-top:14px;padding:12px 14px;background:rgba(255,255,255,.07);border-radius:10px;border:1px solid rgba(255,255,255,.1);align-items:center}
+.loop-result-icon{font-size:20px;flex-shrink:0}
+.loop-result-text{font-size:12px;color:rgba(255,255,255,.75);line-height:1.5}
+.loop-result-text strong{color:#fff}
+
+/* EMPTY */
 .empty{text-align:center;padding:40px 20px;color:var(--muted);font-size:13px}
 
-/* ── RESPONSIVE ── */
+/* RESPONSIVE */
 @media(max-width:600px){
-  .header{padding:24px 16px 20px}
-  .main{padding:16px 12px 60px}
-  .stats-row{grid-template-columns:repeat(3,1fr)}
-  .stat-num{font-size:24px}
-  .tabs{gap:3px}
-  .tab{min-width:80px;font-size:12px;padding:8px 8px}
-  .ev-plain{display:none}
+  .header{padding:24px 16px 20px}.main{padding:16px 12px 60px}
+  .stats-row{grid-template-columns:repeat(3,1fr)}.stat-num{font-size:24px}
+  .tabs{gap:3px}.tab{min-width:80px;font-size:11px;padding:8px 6px}
+  .ev-plain{display:none}.ca-table-head,.ca-row{grid-template-columns:1fr}
+  .ca-th:not(:first-child),.ca-row>*:not(:first-child){display:none}
 }
 </style>
 </head>
@@ -187,14 +265,15 @@ body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);min-h
       <div class="header-icon">📡</div>
       <div>
         <h1>Nextpaz Event Strategy Guide</h1>
-        <div class="header-sub">For Marketing Team — How our system tracks user actions &amp; what we send to Meta</div>
+        <div class="header-sub">For Marketing Team — How our system tracks actions, what we send to Meta, and why it compounds</div>
       </div>
     </div>
     <div class="header-badges">
       <span class="h-badge">🏢 Platform Layer</span>
       <span class="h-badge">🛒 Store Layer</span>
       <span class="h-badge">🛡️ Fraud Layer</span>
-      <span class="h-badge">📊 15 Meta Events</span>
+      <span class="h-badge">📣 15 Meta Events</span>
+      <span class="h-badge">🧠 Ad Architecture</span>
     </div>
   </div>
 </div>
@@ -207,315 +286,271 @@ body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);min-h
     <button class="tab" onclick="showPanel('meta',this)"><span class="tab-icon">📣</span>Meta Ad Events</button>
     <button class="tab" onclick="showPanel('layers',this)"><span class="tab-icon">🗂️</span>All 3 Layers</button>
     <button class="tab" onclick="showPanel('journey',this)"><span class="tab-icon">🚶</span>Seller Journey</button>
+    <button class="tab" onclick="showPanel('strategy',this)"><span class="tab-icon">🧠</span>Ad Architecture</button>
   </div>
 
   <!-- ═══════ OVERVIEW ═══════ -->
   <div id="panel-overview" class="panel active">
-
     <div class="section-label">The 3 tracking layers</div>
     <div class="layer-grid">
       <div class="layer-card blue">
-        <div class="lc-head">
-          <div class="lc-icon blue">🏢</div>
-          <div>
-            <div class="lc-title">Platform Layer</div>
-            <div class="lc-count">Platform DB — 25+ events</div>
-          </div>
-        </div>
+        <div class="lc-head"><div class="lc-icon blue">🏢</div><div><div class="lc-title">Platform Layer</div><div class="lc-count">Platform DB — 25+ events</div></div></div>
         <div class="lc-desc">Tracks business-level activity. Who signed up, paid, set up their store, and what plan they're on. This is the <strong>"who are they and are they paying?"</strong> layer.</div>
-        <div class="lc-tags">
-          <span class="lc-tag blue">Signups</span>
-          <span class="lc-tag blue">Subscriptions</span>
-          <span class="lc-tag blue">Payments</span>
-          <span class="lc-tag blue">Domains</span>
-          <span class="lc-tag blue">Trial</span>
-        </div>
+        <div class="lc-tags"><span class="lc-tag blue">Signups</span><span class="lc-tag blue">Subscriptions</span><span class="lc-tag blue">Payments</span><span class="lc-tag blue">Domains</span><span class="lc-tag blue">Trial</span></div>
       </div>
       <div class="layer-card green">
-        <div class="lc-head">
-          <div class="lc-icon green">🛒</div>
-          <div>
-            <div class="lc-title">Store Layer</div>
-            <div class="lc-count">Store DB — 20+ events</div>
-          </div>
-        </div>
+        <div class="lc-head"><div class="lc-icon green">🛒</div><div><div class="lc-title">Store Layer</div><div class="lc-count">Store DB — 20+ events</div></div></div>
         <div class="lc-desc">Tracks what happens inside the seller's store. Products, orders, deliveries, courier updates. This is the <strong>"what's happening in their business?"</strong> layer.</div>
-        <div class="lc-tags">
-          <span class="lc-tag green">Products</span>
-          <span class="lc-tag green">Orders</span>
-          <span class="lc-tag green">Deliveries</span>
-          <span class="lc-tag green">Couriers</span>
-        </div>
+        <div class="lc-tags"><span class="lc-tag green">Products</span><span class="lc-tag green">Orders</span><span class="lc-tag green">Deliveries</span><span class="lc-tag green">Couriers</span></div>
       </div>
       <div class="layer-card red">
-        <div class="lc-head">
-          <div class="lc-icon red">🛡️</div>
-          <div>
-            <div class="lc-title">Fraud Layer</div>
-            <div class="lc-count">Fraud DB — 15+ events</div>
-          </div>
-        </div>
+        <div class="lc-head"><div class="lc-icon red">🛡️</div><div><div class="lc-title">Fraud Layer</div><div class="lc-count">Fraud DB — 15+ events</div></div></div>
         <div class="lc-desc">Scores every order for risk and blocks bad actors. This layer is the <strong>gatekeeper</strong> — it decides if a Purchase event is allowed to reach Meta or not.</div>
-        <div class="lc-tags">
-          <span class="lc-tag red">Risk scoring</span>
-          <span class="lc-tag red">Blocking</span>
-          <span class="lc-tag red">Suppression</span>
-        </div>
+        <div class="lc-tags"><span class="lc-tag red">Risk scoring</span><span class="lc-tag red">Blocking</span><span class="lc-tag red">Suppression</span></div>
       </div>
     </div>
-
     <div class="stats-row">
       <div class="stat-card"><div class="stat-num">3</div><div class="stat-label">Tracking Layers</div></div>
       <div class="stat-card"><div class="stat-num">3</div><div class="stat-label">Core Meta Events</div></div>
       <div class="stat-card"><div class="stat-num">12</div><div class="stat-label">Support Meta Events</div></div>
     </div>
-
     <div class="section-label">How it all connects — Big picture flow</div>
     <div class="flow-card">
       <div class="flow-title">🔄 From first visit to a real purchase</div>
       <div class="flow-steps">
         <div class="flow-step">
-          <div class="flow-line">
-            <div class="flow-dot" style="background:var(--blue-light);color:var(--blue-dark)">1</div>
-            <div class="flow-connector"></div>
-          </div>
-          <div class="flow-body">
-            <div class="flow-step-title">Signup &amp; Verification</div>
-            <div class="flow-chips">
-              <span class="chip blue">📝 user.registered</span>
-              <span class="chip blue">✉️ user.email_verified</span>
-              <span class="chip green">→ CompleteRegistration fires to Meta ✓</span>
-            </div>
-          </div>
+          <div class="flow-line"><div class="flow-dot" style="background:var(--blue-light);color:var(--blue-dark)">1</div><div class="flow-connector"></div></div>
+          <div class="flow-body"><div class="flow-step-title">Signup &amp; Verification</div><div class="flow-chips"><span class="chip blue">📝 user.registered</span><span class="chip blue">✉️ user.email_verified</span><span class="chip green">→ CompleteRegistration fires to Meta ✓</span></div></div>
         </div>
         <div class="flow-step">
-          <div class="flow-line">
-            <div class="flow-dot" style="background:var(--orange-light);color:var(--orange-dark)">2</div>
-            <div class="flow-connector"></div>
-          </div>
-          <div class="flow-body">
-            <div class="flow-step-title">Trial &amp; Value Discovery</div>
-            <div class="flow-chips">
-              <span class="chip orange">⏳ trial.started</span>
-              <span class="chip orange">💡 financial_impact_seen</span>
-              <span class="chip green">→ Subscribe + financial_impact_seen to Meta ✓</span>
-            </div>
-          </div>
+          <div class="flow-line"><div class="flow-dot" style="background:var(--orange-light);color:var(--orange-dark)">2</div><div class="flow-connector"></div></div>
+          <div class="flow-body"><div class="flow-step-title">Trial &amp; Value Discovery</div><div class="flow-chips"><span class="chip orange">⏳ trial.started</span><span class="chip orange">💡 financial_impact_seen</span><span class="chip green">→ Subscribe + financial_impact_seen to Meta ✓</span></div></div>
         </div>
         <div class="flow-step">
-          <div class="flow-line">
-            <div class="flow-dot" style="background:var(--green-light);color:var(--green-dark)">3</div>
-            <div class="flow-connector"></div>
-          </div>
-          <div class="flow-body">
-            <div class="flow-step-title">First Order Placed</div>
-            <div class="flow-chips">
-              <span class="chip blue">🛒 order.created</span>
-              <span class="chip red">🛡️ fraud.scored</span>
-            </div>
-          </div>
+          <div class="flow-line"><div class="flow-dot" style="background:var(--green-light);color:var(--green-dark)">3</div><div class="flow-connector"></div></div>
+          <div class="flow-body"><div class="flow-step-title">First Order Placed</div><div class="flow-chips"><span class="chip blue">🛒 order.created</span><span class="chip red">🛡️ fraud.scored</span></div></div>
         </div>
         <div class="flow-step">
-          <div class="flow-line">
-            <div class="flow-dot" style="background:var(--green-light);color:var(--green-dark)">✓</div>
-            <div class="flow-connector" style="background:transparent"></div>
-          </div>
-          <div class="flow-body">
-            <div class="flow-step-title">Outcome</div>
-            <div class="flow-chips">
-              <span class="chip green">✅ Clean → Purchase fires to Meta</span>
-              <span class="chip red">🚫 Flagged → Purchase suppressed, Meta not told</span>
-            </div>
-          </div>
+          <div class="flow-line"><div class="flow-dot" style="background:var(--green-light);color:var(--green-dark)">✓</div><div class="flow-connector" style="background:transparent"></div></div>
+          <div class="flow-body"><div class="flow-step-title">Outcome</div><div class="flow-chips"><span class="chip green">✅ Clean → Purchase fires to Meta</span><span class="chip red">🚫 Flagged → Purchase suppressed</span></div></div>
         </div>
       </div>
     </div>
-
     <div class="suppress-box">
-      <div class="suppress-title">🛡️ Why the Fraud Layer matters for Meta</div>
-      <div class="suppress-row">
-        <span class="sup-label" style="background:var(--green-light);color:var(--green-dark)">Clean order</span>
-        <span class="jf-arrow">→</span>
-        <span class="sup-desc">Fraud check passes → Purchase event fires to Meta → Meta optimizes toward real buyers</span>
-      </div>
-      <div class="suppress-row">
-        <span class="sup-label" style="background:var(--red-light);color:var(--red-dark)">Flagged order</span>
-        <span class="jf-arrow">→</span>
-        <span class="sup-desc">Fraud check fails → Purchase event is silently blocked → Meta never sees it → Ad quality stays clean</span>
-      </div>
+      <div class="suppress-title">🛡️ Why the Fraud Layer matters for Meta ad quality</div>
+      <div class="suppress-row"><span class="sup-label" style="background:var(--green-light);color:var(--green-dark)">Clean order</span><span class="jf-arrow">→</span><span class="sup-desc">Fraud check passes → Purchase fires to Meta → Meta learns from real buyers → Ad quality improves over time</span></div>
+      <div class="suppress-row"><span class="sup-label" style="background:var(--red-light);color:var(--red-dark)">Flagged order</span><span class="jf-arrow">→</span><span class="sup-desc">Fraud check fails → Purchase silently blocked → Meta never sees it → Ad model stays uncontaminated</span></div>
     </div>
   </div>
 
   <!-- ═══════ META EVENTS ═══════ -->
   <div id="panel-meta" class="panel">
-
     <div class="legend">
       <div class="leg-item"><div class="leg-dot" style="background:var(--green)"></div>Core decision events</div>
       <div class="leg-item"><div class="leg-dot" style="background:var(--orange)"></div>Gap / cron events (server jobs)</div>
       <div class="leg-item"><div class="leg-dot" style="background:var(--blue)"></div>Trigger view events (browser)</div>
     </div>
-
     <div class="filter-row">
       <button class="filter-btn on" onclick="filterMeta('all',this)">🔍 All 15</button>
       <button class="filter-btn" onclick="filterMeta('core',this)">⭐ Core (3)</button>
       <button class="filter-btn" onclick="filterMeta('gap',this)">⏰ Gap / Cron (6)</button>
       <button class="filter-btn" onclick="filterMeta('view',this)">👁️ Trigger Views (3)</button>
     </div>
-
     <div class="events-list" id="meta-list"></div>
   </div>
 
   <!-- ═══════ ALL LAYERS ═══════ -->
   <div id="panel-layers" class="panel">
-
     <div style="background:var(--surface);border-radius:var(--radius-lg);padding:14px 16px;box-shadow:var(--shadow);margin-bottom:18px;font-size:13px;color:var(--muted);line-height:1.6;display:flex;gap:10px">
       <span style="font-size:18px;flex-shrink:0">ℹ️</span>
-      <span>Below are <strong>all events</strong> in the system. Only the <strong>15 Meta events</strong> (visible in the Meta Ad Events tab) are sent to Meta. Everything else stays internal for operational and business intelligence purposes.</span>
+      <span>Below are <strong>all events</strong> in the system. Only the <strong>15 Meta events</strong> (Meta Ad Events tab) are sent to Meta. Everything else stays internal for operations and analytics.</span>
     </div>
-
     <div class="filter-row">
       <button class="filter-btn on" onclick="filterLayer('all',this)">🔍 All layers</button>
       <button class="filter-btn" onclick="filterLayer('platform',this)">🏢 Platform</button>
       <button class="filter-btn" onclick="filterLayer('tenant',this)">🛒 Store</button>
       <button class="filter-btn" onclick="filterLayer('fraud',this)">🛡️ Fraud</button>
     </div>
-
     <div class="events-list" id="layer-list"></div>
   </div>
 
   <!-- ═══════ JOURNEY ═══════ -->
   <div id="panel-journey" class="panel">
-
-    <!-- Step 1 -->
     <div class="journey-section">
-      <div class="journey-step-header">
-        <div class="journey-num">1</div>
-        <div class="journey-step-title">Signup &amp; Onboarding</div>
-      </div>
+      <div class="journey-step-header"><div class="journey-num">1</div><div class="journey-step-title">Signup &amp; Onboarding</div></div>
       <div class="journey-card">
         <div class="journey-flow">
-          <div class="jf-row">
-            <div class="jf-node gray">👤 New visitor</div>
-            <span class="jf-arrow">→</span>
-            <div class="jf-node blue">📝 user.registered fires</div>
-            <span class="jf-arrow">→</span>
-            <div class="jf-node green">✅ CompleteRegistration → Meta</div>
-          </div>
-          <div class="jf-row" style="padding-left:20px">
-            <div class="jf-node gray">⏳ X days pass, no store setup</div>
-            <span class="jf-arrow">→</span>
-            <div class="jf-node orange">⏰ Cron fires: registered_no_onboarding → Meta</div>
-          </div>
+          <div class="jf-row"><div class="jf-node gray">👤 New visitor</div><span class="jf-arrow">→</span><div class="jf-node blue">📝 user.registered fires</div><span class="jf-arrow">→</span><div class="jf-node green">✅ CompleteRegistration → Meta</div></div>
+          <div class="jf-row" style="padding-left:20px"><div class="jf-node gray">⏳ X days pass, no store setup</div><span class="jf-arrow">→</span><div class="jf-node orange">⏰ registered_no_onboarding → Meta</div></div>
         </div>
       </div>
     </div>
-
-    <!-- Step 2 -->
     <div class="journey-section">
-      <div class="journey-step-header">
-        <div class="journey-num">2</div>
-        <div class="journey-step-title">Trial Period &amp; Value Discovery</div>
-      </div>
+      <div class="journey-step-header"><div class="journey-num">2</div><div class="journey-step-title">Trial Period &amp; Value Discovery</div></div>
       <div class="journey-card">
         <div class="journey-flow">
-          <div class="jf-row">
-            <div class="jf-node orange">⏳ trial.started</div>
-            <span class="jf-arrow">→</span>
-            <div class="jf-node green">✅ Subscribe → Meta</div>
-          </div>
-          <div class="jf-row">
-            <div class="jf-node blue">💡 Seller sees revenue projection screen</div>
-            <span class="jf-arrow">→</span>
-            <div class="jf-node green">✅ financial_impact_seen → Meta</div>
-          </div>
-          <div class="jf-row" style="padding-left:20px">
-            <div class="jf-node gray">⏱️ Trial ends, no subscription</div>
-            <span class="jf-arrow">→</span>
-            <div class="jf-node orange">⏰ trial_expired → Meta</div>
-          </div>
-          <div class="jf-row" style="padding-left:20px">
-            <div class="jf-node gray">📦 Trial ended, 0 orders received</div>
-            <span class="jf-arrow">→</span>
-            <div class="jf-node orange">⏰ trial_no_purchase → Meta</div>
-          </div>
-          <div class="jf-row" style="padding-left:20px">
-            <div class="jf-node gray">💤 Saw value, then went quiet</div>
-            <span class="jf-arrow">→</span>
-            <div class="jf-node orange">⏰ dormant_post_impact → Meta</div>
-          </div>
-          <div class="jf-row" style="padding-left:20px">
-            <div class="jf-node gray">💡 Saw value, never started trial</div>
-            <span class="jf-arrow">→</span>
-            <div class="jf-node orange">⏰ impact_seen_no_trial → Meta</div>
-          </div>
+          <div class="jf-row"><div class="jf-node orange">⏳ trial.started</div><span class="jf-arrow">→</span><div class="jf-node green">✅ Subscribe → Meta</div></div>
+          <div class="jf-row"><div class="jf-node blue">💡 Seller sees revenue projection screen</div><span class="jf-arrow">→</span><div class="jf-node green">✅ financial_impact_seen → Meta</div></div>
+          <div class="jf-row" style="padding-left:20px"><div class="jf-node gray">⏱️ Trial ends, no subscription</div><span class="jf-arrow">→</span><div class="jf-node orange">⏰ trial_expired → Meta</div></div>
+          <div class="jf-row" style="padding-left:20px"><div class="jf-node gray">📦 Trial ended, 0 orders received</div><span class="jf-arrow">→</span><div class="jf-node orange">⏰ trial_no_purchase → Meta</div></div>
+          <div class="jf-row" style="padding-left:20px"><div class="jf-node gray">💤 Saw value, then went quiet</div><span class="jf-arrow">→</span><div class="jf-node orange">⏰ dormant_post_impact → Meta</div></div>
+          <div class="jf-row" style="padding-left:20px"><div class="jf-node gray">💡 Saw value, never started trial</div><span class="jf-arrow">→</span><div class="jf-node orange">⏰ impact_seen_no_trial → Meta</div></div>
         </div>
       </div>
     </div>
-
-    <!-- Step 3 -->
     <div class="journey-section">
-      <div class="journey-step-header">
-        <div class="journey-num">3</div>
-        <div class="journey-step-title">First Real Order — The Critical Moment</div>
-      </div>
+      <div class="journey-step-header"><div class="journey-num">3</div><div class="journey-step-title">First Real Order — The Critical Moment</div></div>
       <div class="journey-card">
         <div class="journey-flow">
-          <div class="jf-row">
-            <div class="jf-node blue">🛒 order.created</div>
-            <span class="jf-arrow">→</span>
-            <div class="jf-node red">🛡️ fraud.scored (every order)</div>
-          </div>
-          <div class="jf-row" style="padding-left:20px">
-            <div class="jf-node green">✅ fraud.clean</div>
-            <span class="jf-arrow">→</span>
-            <div class="jf-node green">✅ Purchase → Meta (real signal)</div>
-          </div>
-          <div class="jf-row" style="padding-left:20px">
-            <div class="jf-node red">🚫 fraud.fraud_order / hard_block</div>
-            <span class="jf-arrow">→</span>
-            <div class="jf-node gray">🔕 Purchase suppressed — Meta not notified</div>
-          </div>
-          <div class="jf-row" style="padding-left:20px">
-            <div class="jf-node orange">⚠️ fraud.review (medium risk)</div>
-            <span class="jf-arrow">→</span>
-            <div class="jf-node gray">🔍 Flagged for manual review</div>
-          </div>
+          <div class="jf-row"><div class="jf-node blue">🛒 order.created</div><span class="jf-arrow">→</span><div class="jf-node red">🛡️ fraud.scored</div></div>
+          <div class="jf-row" style="padding-left:20px"><div class="jf-node green">✅ fraud.clean</div><span class="jf-arrow">→</span><div class="jf-node green">✅ Purchase → Meta (real signal)</div></div>
+          <div class="jf-row" style="padding-left:20px"><div class="jf-node red">🚫 fraud.fraud_order</div><span class="jf-arrow">→</span><div class="jf-node gray">🔕 Purchase suppressed — Meta not notified</div></div>
+          <div class="jf-row" style="padding-left:20px"><div class="jf-node orange">⚠️ fraud.review</div><span class="jf-arrow">→</span><div class="jf-node gray">🔍 Flagged for manual review</div></div>
         </div>
       </div>
     </div>
-
-    <!-- Step 4 — Trigger views -->
     <div class="journey-section">
-      <div class="journey-step-header">
-        <div class="journey-num">4</div>
-        <div class="journey-step-title">Trigger View Events — What screen did they see?</div>
-      </div>
+      <div class="journey-step-header"><div class="journey-num">4</div><div class="journey-step-title">Trigger View Events — What screen did they see?</div></div>
       <div class="journey-card">
-        <p style="font-size:12px;color:var(--muted);margin-bottom:12px">These fire automatically in the browser the moment a specific screen loads. They let Meta know what emotional/motivational frame the user was shown.</p>
+        <p style="font-size:12px;color:var(--muted);margin-bottom:12px">These fire automatically in the browser when a specific screen loads. They let Meta know what motivational frame the user was shown.</p>
         <div class="journey-flow">
-          <div class="jf-row">
-            <div class="jf-node red">😰 "You're losing money" banner shown</div>
-            <span class="jf-arrow">→</span>
-            <div class="jf-node blue">loss_reminder_shown → Meta</div>
-          </div>
-          <div class="jf-row">
-            <div class="jf-node orange">🎯 "Here's what you missed" screen shown</div>
-            <span class="jf-arrow">→</span>
-            <div class="jf-node blue">missed_value_shown → Meta</div>
-          </div>
-          <div class="jf-row">
-            <div class="jf-node green">💰 "You saved this much" screen shown</div>
-            <span class="jf-arrow">→</span>
-            <div class="jf-node blue">saved_value_reminder_shown → Meta</div>
-          </div>
+          <div class="jf-row"><div class="jf-node red">😰 "You're losing money" banner shown</div><span class="jf-arrow">→</span><div class="jf-node blue">loss_reminder_shown → Meta</div></div>
+          <div class="jf-row"><div class="jf-node orange">🎯 "Here's what you missed" screen shown</div><span class="jf-arrow">→</span><div class="jf-node blue">missed_value_shown → Meta</div></div>
+          <div class="jf-row"><div class="jf-node green">💰 "You saved this much" screen shown</div><span class="jf-arrow">→</span><div class="jf-node blue">saved_value_reminder_shown → Meta</div></div>
         </div>
       </div>
     </div>
+  </div>
 
-  </div><!-- end journey -->
+  <!-- ═══════ AD ARCHITECTURE ═══════ -->
+  <div id="panel-strategy" class="panel">
+
+    <!-- Hero brief -->
+    <div class="ms-hero">
+      <div class="ms-hero-label">🧠 SaaS Growth Architecture — Internal Brief</div>
+      <div class="ms-hero-title">Why our 15 events split into two completely different jobs</div>
+      <div class="ms-hero-desc">Most people see "15 Meta events" and think they all do the same thing. They don't. 3 of them talk directly to Meta's AI optimizer. The other 12 build the audience buckets that make retargeting intelligent. Understanding the difference is what separates a team that scales from one that burns budget.</div>
+    </div>
+
+    <!-- Two layer boxes -->
+    <div class="section-label">The two-layer architecture</div>
+    <div class="two-col">
+      <div class="layer-box optimizer">
+        <div class="lb-header">
+          <div class="lb-icon">🤖</div>
+          <div><div class="lb-badge opt">Layer 1 — Optimizer</div><div class="lb-title" style="margin-top:5px">Standard Events (3)</div><div class="lb-subtitle">Train Meta's AI to find buyers</div></div>
+        </div>
+        <ul class="lb-bullets">
+          <li>Meta's algorithm reads these to build a behavioral profile of "who converts"</li>
+          <li>Powers your campaign objectives — Leads, Conversions, ROAS</li>
+          <li>The optimizer gets measurably smarter every ~50 conversions it sees</li>
+          <li>Without these, Meta is showing ads to random people</li>
+          <li><strong>Events: CompleteRegistration · Subscribe · Purchase</strong></li>
+        </ul>
+      </div>
+      <div class="layer-box audience">
+        <div class="lb-header">
+          <div class="lb-icon">🪣</div>
+          <div><div class="lb-badge aud">Layer 2 — Audiences</div><div class="lb-title" style="margin-top:5px">Custom Events (12)</div><div class="lb-subtitle">Sort users into retargeting buckets</div></div>
+        </div>
+        <ul class="lb-bullets">
+          <li>Meta's optimizer cannot use these — they don't train the algorithm</li>
+          <li>Used in Audiences Manager to build precise Custom Audiences</li>
+          <li>Each event = a bucket of users at a specific drop-off point</li>
+          <li>Without these, your retargeting is "everyone who visited the site"</li>
+          <li><strong>9 behavioral events → 9 distinct retargeting segments</strong></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Standard events deep dive -->
+    <div class="section-label">Standard events — what each one does inside Meta</div>
+    <div class="event-deep-grid" id="edg-container"></div>
+
+    <!-- Custom audience map -->
+    <div class="section-label">Custom events → audience segments → campaign use</div>
+    <div class="ca-table-wrap">
+      <div class="ca-table-head">
+        <div class="ca-th">Custom Event</div>
+        <div class="ca-th">Audience it builds</div>
+        <div class="ca-th">Campaign use case</div>
+      </div>
+      <div id="ca-rows"></div>
+    </div>
+
+    <!-- Full funnel -->
+    <div class="section-label">How both layers work together — the full growth loop</div>
+    <div class="funnel-card">
+      <div class="funnel-title">🔁 Cold traffic → retargeting → lookalike → scale</div>
+      <div class="funnel-stages" id="funnel-stages"></div>
+    </div>
+
+    <!-- 70/20/10 content -->
+    <div class="section-label">Content strategy — 70 / 20 / 10 framework</div>
+    <div style="background:var(--surface);border-radius:var(--radius-lg);padding:14px 18px;box-shadow:var(--shadow);margin-bottom:14px;font-size:13px;color:var(--muted);line-height:1.6">
+      💡 <strong style="color:var(--text)">The compounding principle:</strong> Every piece of content you create is either training Meta's optimizer faster or wasting its budget on scattered signals. If your posts all push toward the same 3 conversion events, each impression builds on the last. If they're scattered across topics, Meta can't lock in a profile, and your CPL stays high indefinitely.
+    </div>
+    <div class="split-rule">
+      <div class="sr-card l1">
+        <div class="sr-pct l1">70%</div>
+        <div class="sr-event l1">→ CompleteRegistration</div>
+        <div class="sr-theme">Stop losing money to fraud orders</div>
+        <div class="sr-trigger">Emotional trigger: Fear of loss · Frustration with current pain</div>
+        <ul class="sr-examples">
+          <li>"এই মাসে কত টাকা ক্ষতি হয়েছে? Calculate করুন"</li>
+          <li>Fraud caught case study — "৳১৫,০০০ saved today"</li>
+          <li>"১০০টি COD অর্ডারের ৩০টি fake — BD reality"</li>
+          <li>Pain reel: "৫টা order return আসলে কী হয়..."</li>
+          <li>Manual check vs NirapodCheck: 6 hours vs 6 seconds</li>
+        </ul>
+      </div>
+      <div class="sr-card l2">
+        <div class="sr-pct l2">20%</div>
+        <div class="sr-event l2">→ Subscribe</div>
+        <div class="sr-theme">What ৳699/month actually protects</div>
+        <div class="sr-trigger">Emotional trigger: ROI proof · Social proof · FOMO</div>
+        <ul class="sr-examples">
+          <li>"৭ দিনে ৩ merchant কী পেলেন?" (trial outcome stories)</li>
+          <li>ROI math: "১টা fake order ঠেকালেই recovered"</li>
+          <li>Monthly vs yearly pricing breakdown ("৬ মাস free")</li>
+          <li>NirapodCheck live demo · Pathao integration walkthrough</li>
+        </ul>
+      </div>
+      <div class="sr-card l3">
+        <div class="sr-pct l3">10%</div>
+        <div class="sr-event l3">→ Purchase / Renewal</div>
+        <div class="sr-theme">Merchant success · belonging · identity</div>
+        <div class="sr-trigger">Emotional trigger: "I'm a smart merchant" identity reinforcement</div>
+        <ul class="sr-examples">
+          <li>Customer milestone: "X merchant crossed 100 orders"</li>
+          <li>Founder updates — building in public</li>
+          <li>Behind-the-scenes: how detection actually works</li>
+          <li>Community: WhatsApp group, merchant meetups</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Compound loop -->
+    <div class="loop-card">
+      <div class="loop-title">⚡ Why this compounds over time</div>
+      <div class="loop-steps" id="loop-steps"></div>
+      <div class="loop-result">
+        <div class="loop-result-icon">📈</div>
+        <div class="loop-result-text"><strong>The outcome:</strong> Month 1 you're paying to teach Meta. Month 3 Meta is finding better merchants than you can manually target. Month 6 your Lookalike Audiences are built from 50+ paying subscribers — the highest-intent seed audience you will ever have. CPL drops, ROAS climbs, scaling becomes possible.</div>
+      </div>
+    </div>
+
+    <!-- Action checklist -->
+    <div class="section-label">What to verify this week</div>
+    <div style="background:var(--surface);border-radius:var(--radius-lg);box-shadow:var(--shadow);overflow:hidden">
+      <div id="checklist-rows"></div>
+    </div>
+
+  </div><!-- end strategy -->
 </div><!-- end main -->
 
 <script>
+/* ═══ DATA ═══ */
 const META = [
   {name:'CompleteRegistration',type:'core',icon:'📝',plain:'User signs up',
    when:'The moment someone creates an account on the platform',
@@ -525,20 +560,20 @@ const META = [
   {name:'Subscribe',type:'core',icon:'⏳',plain:'Trial activated',
    when:'A seller activates their free trial (3 days or 25 orders)',
    fires:'Browser pixel + server CAPI',
-   why:'Subscription/trial start is a strong intent signal for Meta optimization',
+   why:'Trial start is a strong purchase-intent signal for Meta\'s optimizer',
    action:'Optimize ad delivery toward people likely to start trials. This is your mid-funnel conversion signal.'},
   {name:'Purchase',type:'core',icon:'💰',plain:'Real paid order placed (fraud-verified)',
    when:'A customer places an order AND the fraud layer approves it',
    fires:'Browser pixel + server CAPI — ONLY if fraud check passes',
    why:'The main revenue signal. Only clean orders fire this, keeping Meta\'s data high quality',
-   action:'Primary optimization event. Meta uses this to find you more sellers who will get real orders. Never fired for fraudulent orders.'},
+   action:'Primary optimization event. Meta uses this to find more sellers who will get real orders. Never fired for fraudulent orders.'},
   {name:'financial_impact_seen',type:'core',icon:'💡',plain:'Seller views their revenue potential screen',
-   when:'Seller views the screen that shows their projected or actual financial impact',
+   when:'Seller views the screen showing projected or actual financial impact',
    fires:'Browser pixel + server CAPI',
    why:'High-intent signal — they engaged with a value proposition screen',
    action:'Custom audience of people who saw value but didn\'t convert. Strong signal for retargeting with pricing or success stories.'},
   {name:'trial_expired',type:'gap',icon:'⏱️',plain:'Trial ended without subscribing',
-   when:'Trial period ends (time up or 25 orders hit) without the seller subscribing',
+   when:'Trial period ends without the seller subscribing to a paid plan',
    fires:'Server cron job only (subscriptionRenewal.job.js)',
    why:'Identifies users who slipped through at the critical trial→paid moment',
    action:'Urgent re-engagement. Target with "Your trial ended" messaging. High-value audience — they tried the product.'},
@@ -553,27 +588,27 @@ const META = [
    why:'These users tested the platform but never proved it works for their business',
    action:'Re-engage with "how to get your first order" content or success story ads.'},
   {name:'registered_no_onboarding',type:'gap',icon:'🔧',plain:'Signed up but never set up store',
-   when:'Account created but onboarding steps not completed after a defined window',
+   when:'Account created but onboarding not completed after a defined window',
    fires:'Server cron job only (behavioralSignals.job.js)',
    why:'Highest-volume drop-off point — catches people who lost momentum immediately after signup',
    action:'Onboarding nudge ads. "You\'re 3 steps away from your store" messaging. Biggest opportunity for volume.'},
   {name:'dormant_post_impact',type:'gap',icon:'💤',plain:'Went quiet after seeing value',
-   when:'User saw the financial impact screen, then became inactive for a defined period',
+   when:'User saw the financial impact screen, then became inactive',
    fires:'Server cron job only (behavioralSignals.job.js)',
    why:'They were close — they saw the value — but something stopped them',
-   action:'Win-back campaign. Use "You saw this 7 days ago…" framing. These users just need a push.'},
+   action:'Win-back campaign. "You saw this 7 days ago…" framing. These users just need a push.'},
   {name:'loss_reminder_shown',type:'view',icon:'😰',plain:'"You\'re losing money" banner appeared',
-   when:'A screen showing the user\'s lost revenue or missed opportunity loads in the browser',
+   when:'Screen showing the user\'s lost revenue loads in the browser',
    fires:'Browser only (on component mount)',
    why:'Records which users saw loss-framing so Meta can segment them separately',
    action:'Build a segment of "loss-framed" users to test against "gain-framed" users for creative testing.'},
   {name:'missed_value_shown',type:'view',icon:'😟',plain:'"Here\'s what you missed" screen appeared',
-   when:'Screen showing missed earnings or missed features loads for the user',
+   when:'Screen showing missed earnings or features loads for the user',
    fires:'Browser only (on component mount)',
    why:'Tracks exposure to the "missed opportunity" motivational frame',
    action:'Retarget with aspiration-based ads. These users have been primed to think about what they\'re missing.'},
   {name:'saved_value_reminder_shown',type:'view',icon:'💎',plain:'"Here\'s what you saved" screen appeared',
-   when:'Screen showing the money or effort the user has saved via the platform loads',
+   when:'Screen showing money or effort saved via the platform loads',
    fires:'Browser only (on component mount)',
    why:'Tracks exposure to positive reinforcement / social proof framing',
    action:'Use for upsell or testimonial-style ad targeting. These users have been shown a positive outcome.'},
@@ -588,13 +623,13 @@ const LAYERS = [
   {name:'user.activated / deactivated',layer:'platform',icon:'👤',plain:'Admin enables or disables an account'},
   {name:'user.deleted',layer:'platform',icon:'🗑️',plain:'Admin permanently removes a user'},
   {name:'website.created',layer:'platform',icon:'🌐',plain:'New storefront created during onboarding'},
-  {name:'website.enabled / disabled',layer:'platform',icon:'🔔',plain:'Store goes live or taken offline by admin'},
+  {name:'website.enabled / disabled',layer:'platform',icon:'🔔',plain:'Store goes live or taken offline'},
   {name:'website.deployed',layer:'platform',icon:'🚀',plain:'Latest store config pushed to live'},
   {name:'website.template_assigned',layer:'platform',icon:'🎨',plain:'Design template linked to store'},
   {name:'subscription.created',layer:'platform',icon:'💳',plain:'Plan activated for the first time'},
   {name:'subscription.upgraded / downgraded',layer:'platform',icon:'📈',plain:'Plan tier changed up or down'},
   {name:'subscription.cancelled',layer:'platform',icon:'❌',plain:'Plan cancelled, ends at billing boundary'},
-  {name:'subscription.renewed / expired',layer:'platform',icon:'🔄',plain:'Plan auto-renewed or expired without renewal'},
+  {name:'subscription.renewed / expired',layer:'platform',icon:'🔄',plain:'Plan auto-renewed or expired'},
   {name:'trial.started',layer:'platform',icon:'⏳',plain:'Free trial activated (3 days or 25 orders)'},
   {name:'trial.expired',layer:'platform',icon:'⏱️',plain:'Trial time ended or 25-order limit hit'},
   {name:'payment.created',layer:'platform',icon:'💳',plain:'Payment attempt initiated'},
@@ -603,58 +638,116 @@ const LAYERS = [
   {name:'domain.created',layer:'platform',icon:'🌍',plain:'Custom domain added to account'},
   {name:'domain.dns_verified',layer:'platform',icon:'✅',plain:'DNS records confirmed pointing correctly'},
   {name:'domain.ssl_provisioned',layer:'platform',icon:'🔐',plain:'HTTPS certificate issued via Caddy ACME'},
-  {name:'domain.activated',layer:'platform',icon:'🟢',plain:'Custom domain fully live and serving traffic'},
+  {name:'domain.activated',layer:'platform',icon:'🟢',plain:'Custom domain fully live'},
   {name:'product.created / updated / deleted',layer:'tenant',icon:'📦',plain:'Seller manages their product catalog'},
   {name:'order.created',layer:'tenant',icon:'🛒',plain:'Customer places an order'},
   {name:'order.confirmed',layer:'tenant',icon:'👍',plain:'Seller confirms and accepts the order'},
   {name:'order.processing',layer:'tenant',icon:'⚙️',plain:'Order is being prepared / packed'},
   {name:'order.shipped',layer:'tenant',icon:'🚚',plain:'Order handed to courier for delivery'},
   {name:'order.delivered',layer:'tenant',icon:'📬',plain:'Courier confirms successful delivery'},
-  {name:'order.returned / cancelled',layer:'tenant',icon:'↩️',plain:'Order returned by courier or cancelled'},
-  {name:'order.manual_created',layer:'tenant',icon:'✍️',plain:'Seller creates order manually (not from storefront)'},
+  {name:'order.returned / cancelled',layer:'tenant',icon:'↩️',plain:'Order returned or cancelled'},
+  {name:'order.manual_created',layer:'tenant',icon:'✍️',plain:'Seller creates order manually'},
   {name:'delivery.created',layer:'tenant',icon:'📋',plain:'Consignment data sent to courier API'},
   {name:'delivery.bulk_created',layer:'tenant',icon:'📋',plain:'Multiple consignments sent at once'},
   {name:'delivery.status_updated',layer:'tenant',icon:'📡',plain:'Courier pushes a new status via webhook'},
-  {name:'delivery.cancelled / returned',layer:'tenant',icon:'🔙',plain:'Consignment cancelled or package returned'},
+  {name:'delivery.cancelled / returned',layer:'tenant',icon:'🔙',plain:'Consignment cancelled or returned'},
   {name:'integration.connected',layer:'tenant',icon:'🔗',plain:'Courier credentials validated and linked'},
   {name:'integration.disconnected',layer:'tenant',icon:'🔌',plain:'Courier integration removed'},
   {name:'site_settings.updated',layer:'tenant',icon:'⚙️',plain:'Seller changes store configuration'},
   {name:'fraud.scored',layer:'fraud',icon:'🧮',plain:'Every order receives a composite risk score'},
   {name:'fraud.clean',layer:'fraud',icon:'✅',plain:'Order passes all fraud checks'},
-  {name:'fraud.review',layer:'fraud',icon:'🔍',plain:'Medium-risk order flagged for manual review'},
+  {name:'fraud.review',layer:'fraud',icon:'🔍',plain:'Medium-risk order flagged for review'},
   {name:'fraud.fraud_order',layer:'fraud',icon:'⚠️',plain:'High-risk order detected and flagged'},
-  {name:'fraud.silent_fraud',layer:'fraud',icon:'🤫',plain:'Silently suppressed (seller not told)'},
+  {name:'fraud.silent_fraud',layer:'fraud',icon:'🤫',plain:'Silently suppressed (seller not notified)'},
   {name:'fraud.hard_block',layer:'fraud',icon:'🚫',plain:'Hard block applied — order fully rejected'},
   {name:'fraud.purchase_suppressed',layer:'fraud',icon:'🔕',plain:'Purchase event blocked from firing to Meta'},
   {name:'fraud.purchase_allowed',layer:'fraud',icon:'📣',plain:'Purchase event allowed to fire to Meta'},
-  {name:'fraud.actor_blocked',layer:'fraud',icon:'🚷',plain:'Phone number or IP address permanently banned'},
-  {name:'fraud.otp_blocked',layer:'fraud',icon:'📵',plain:'Unverified phone blocked at checkout (403)'},
-  {name:'fraud.duplicate_detected',layer:'fraud',icon:'👥',plain:'Same phone used twice within a time window'},
+  {name:'fraud.actor_blocked',layer:'fraud',icon:'🚷',plain:'Phone number or IP permanently banned'},
+  {name:'fraud.otp_blocked',layer:'fraud',icon:'📵',plain:'Unverified phone blocked at checkout'},
+  {name:'fraud.duplicate_detected',layer:'fraud',icon:'👥',plain:'Same phone used twice in a time window'},
   {name:'fraud.community_bl_match',layer:'fraud',icon:'📋',plain:'Phone matches community blacklist — score 100%'},
-  {name:'fraud.escalation_created',layer:'fraud',icon:'📤',plain:'Reviewable order sent to fraud review queue'},
+  {name:'fraud.escalation_created',layer:'fraud',icon:'📤',plain:'Order sent to fraud review queue'},
   {name:'fraud.event_reviewed',layer:'fraud',icon:'📝',plain:'Fraud event marked as real or false positive'},
 ];
 
-let metaFilter='all', layerFilter='all';
+const STD_EVENTS = [
+  {icon:'📝',bg:'#EFF6FF',event:'CompleteRegistration',stage:'Top of funnel',stageBg:'#BFDBFE',stageColor:'#1D4ED8',
+   desc:'When you run a "Leads" or "Conversions" campaign, Meta reads everyone who fired this event, builds a behavioral profile — age, device, browsing habits, active hours — then finds BD merchants matching that profile.',
+   metaUses:'Campaign objective training',metaUsesDesc:'Meta\'s optimizer finds people likely to sign up',
+   timeline:'2–4 weeks to optimize (needs 50+ events/week)',
+   action:'Use as your primary optimization goal in Month 1 when Subscribe volume is too low to train on. Every signup teaches Meta who your target merchant looks like.'},
+  {icon:'⏳',bg:'#FFFBEB',event:'Subscribe',stage:'Mid funnel',stageBg:'#FDE68A',stageColor:'#B45309',
+   desc:'When trial converts to paid (৳699/month or ৳4,500/year). Because you send a revenue value with this event, Meta can run Value Optimization — bidding higher for users likely to pick the yearly plan over the monthly.',
+   metaUses:'Value optimization + ROAS reporting',metaUsesDesc:'Meta bids more for users likely to choose higher-value plans',
+   timeline:'Becomes primary goal once you have 50+ Subscribe events/week',
+   action:'This is your most important event to scale. It tells Meta "I want paying merchants, not just free signups." Your Ads Manager will show exact revenue attributed to each ad creative.'},
+  {icon:'💰',bg:'#ECFDF5',event:'Purchase',stage:'Bottom of funnel',stageBg:'#A7F3D0',stageColor:'#047857',
+   desc:'Renewal payments — a subscriber paying again. This builds your highest-quality Lookalike Audience: people who paid once, found value, and paid again. Meta also uses this for 6-month LTV attribution — it tracks the full chain from ad click → signup → subscribe → renew.',
+   metaUses:'LTV attribution + Lookalike seed audiences',metaUsesDesc:'Powers long-term ROAS calculation and highest-quality lookalikes',
+   timeline:'Critical for Year 2 scaling — Lookalikes need 100+ events to be meaningful',
+   action:'Build a Lookalike from your Purchase audience (people who renewed). This is your best cold-traffic audience. Meta knows what a loyal, paying BD merchant looks like — let it find more of them.'},
+];
 
-const TYPE_META = {
-  core:{label:'Core',icon:'⭐',cls:'badge-core',color:'#047857',bg:'#ECFDF5',iconBg:'#D1FAE5'},
-  gap:{label:'Gap / Cron',icon:'⏰',cls:'badge-gap',color:'#B45309',bg:'#FFFBEB',iconBg:'#FDE68A'},
-  view:{label:'Trigger View',icon:'👁️',cls:'badge-view',color:'#1D4ED8',bg:'#EFF6FF',iconBg:'#BFDBFE'},
-};
-const LAYER_META = {
-  platform:{label:'Platform',cls:'badge-platform',iconBg:'#EFF6FF'},
-  tenant:{label:'Store',cls:'badge-tenant',iconBg:'#ECFDF5'},
-  fraud:{label:'Fraud',cls:'badge-fraud',iconBg:'#FEF2F2'},
-};
+const CA_ROWS = [
+  {icon:'💡',event:'financial_impact_seen',audience:'"Engaged but not trialing"',use:'Retarget with direct trial CTA + urgency'},
+  {icon:'😰',event:'loss_reminder_shown',audience:'"Saw fraud loss framing"',use:'Retarget with NirapodCheck live demo'},
+  {icon:'😟',event:'missed_value_shown',audience:'"Saw opportunity framing"',use:'Retarget with merchant ROI testimonial'},
+  {icon:'💎',event:'saved_value_reminder_shown',audience:'"Saw savings framing"',use:'Upsell with pricing comparison ad'},
+  {icon:'⏱️',event:'trial_expired',audience:'"Trial ended, didn\'t pay"',use:'Win-back campaign — offer discount or urgency'},
+  {icon:'📦',event:'trial_no_purchase',audience:'"In trial, 0 orders received"',use:'Mid-trial nudge — "how to get first orders"'},
+  {icon:'🔧',event:'registered_no_onboarding',audience:'"Signed up, never set up"',use:'Activation campaign — "3 steps to your store"'},
+  {icon:'💤',event:'dormant_post_impact',audience:'"Saw value, disappeared"',use:'Re-engagement — "You saw this 7 days ago…"'},
+  {icon:'🎯',event:'impact_seen_no_trial',audience:'"Browsed pricing, bounced"',use:'Trial-CTA retargeting with strong social proof'},
+];
+
+const FUNNEL = [
+  {num:'01',numBg:'#EFF6FF',numColor:'#1D4ED8',stage:'Cold campaign',stageBg:'#BFDBFE',stageColor:'#1D4ED8',
+   name:'Broad targeting — Meta finds your first converters',
+   desc:'Run a Conversions campaign optimizing for CompleteRegistration. Audience: Broad BD merchants 25-45. Meta starts learning who signs up. Cost is highest here.',
+   chips:[{c:'blue',t:'Optimization: CompleteRegistration'},{c:'gray',t:'Audience: Broad BD merchants'},{c:'gray',t:'Goal: Feed data to optimizer'}]},
+  {num:'02',numBg:'#FFFBEB',numColor:'#B45309',stage:'Behavioral retargeting',stageBg:'#FDE68A',stageColor:'#B45309',
+   name:'Custom Audience buckets catch every drop-off',
+   desc:'Backend cron fires behavioral events (trial_no_purchase, registered_no_onboarding, dormant_post_impact). These automatically add users to Custom Audiences in Meta. Each bucket gets a specific retargeting creative.',
+   chips:[{c:'orange',t:'Custom event → Custom Audience'},{c:'blue',t:'Optimization: Subscribe'},{c:'gray',t:'Creative matches the drop-off reason'}]},
+  {num:'03',numBg:'#ECFDF5',numColor:'#047857',stage:'Lookalike expansion',stageBg:'#A7F3D0',stageColor:'#047857',
+   name:'Build from your best users — Meta clones them',
+   desc:'Once you have 50+ Subscribe events, create a 1% Lookalike from your paying subscribers. This is Meta using its full BD behavioral graph to find merchants who look like your actual customers. This is where CPL starts dropping.',
+   chips:[{c:'green',t:'Source: Subscribe audience'},{c:'green',t:'1% Lookalike of paying merchants'},{c:'green',t:'Optimization: Subscribe'}]},
+  {num:'04',numBg:'#F5F3FF',numColor:'#6D28D9',stage:'Compound scaling',stageBg:'#DDD6FE',stageColor:'#6D28D9',
+   name:'Optimizer + audience quality both improving simultaneously',
+   desc:'The loop compounds: better optimizer signals → better Lookalikes → better Custom Audiences → cleaner Purchase data → even better Lookalikes. Month 6 performance is structurally better than Month 1, not just from experience but from data quality.',
+   chips:[{c:'purple',t:'Standard events train optimizer'},{c:'purple',t:'Custom events refine audiences'},{c:'green',t:'CPL ↓  ROAS ↑  Scale ↑'}]},
+];
+
+const LOOP = [
+  {icon:'📣',bg:'#BFDBFE',title:'You run an ad with a focused message',desc:'Every piece of content pushes toward one of the 3 conversion events. The message is consistent week over week.'},
+  {icon:'👤',bg:'#A7F3D0',title:'A merchant clicks, takes action, fires an event',desc:'CompleteRegistration, Subscribe, or Purchase fires. Meta\'s optimizer records the full behavioral profile of this person.'},
+  {icon:'🧠',bg:'#FDE68A',title:'Meta builds a profile: "this is what a converter looks like"',desc:'Device, age, browsing patterns, active hours, keyword affinity. The profile gets richer with every event.'},
+  {icon:'🎯',bg:'#DDD6FE',title:'Meta shows your next ad to people matching that profile',desc:'Cost per result drops because Meta is no longer guessing. It knows who clicks and who converts.'},
+  {icon:'📈',bg:'#FECACA',title:'Better people convert → profile sharpens → costs drop further',desc:'The feedback loop self-reinforces. Scattered messaging breaks the loop at step 1. Focused messaging accelerates it.'},
+];
+
+const CHECKLIST = [
+  {done:false,icon:'🧪',title:'Verify 3 standard events in Meta Test Events tool',desc:'Events Manager → Test Events tab. Trigger each one manually and confirm the parameters (em, ph, fbp, event_id) are arriving correctly.'},
+  {done:false,icon:'📊',title:'Confirm 12 custom events are flowing in Events Manager',desc:'Events Manager → Overview. You should see all 12 custom event names being received. If any show 0 in the last 7 days, the cron or browser emitter needs a check.'},
+  {done:false,icon:'🪣',title:'Create Custom Audiences for each behavioral segment',desc:'Audiences → Create Audience → Custom Audience → Website/App Events. Build one audience per custom event. Name them clearly: "Trial Expired — BD", "Registered No Onboarding — BD".'},
+  {done:false,icon:'📣',title:'Launch first cold campaign optimizing for CompleteRegistration',desc:'Until you hit 50+ Subscribe events/week, CompleteRegistration is the right optimization goal. Broad targeting, 3 ad variants, consistent message around fraud loss.'},
+  {done:false,icon:'📅',title:'Map next 7 posts to the 70/20/10 split',desc:'5 posts → Layer 1 (fraud loss stories), 1-2 posts → Layer 2 (ROI proof), 1 post → Layer 3 (community/retention). Every post must push toward one of the 3 events.'},
+  {done:false,icon:'🔁',title:'Build your Month 1 core promise — one sentence, in Bangla',desc:'One message, all month. Every ad, every post, every WhatsApp message reinforces the same promise. Consistent frequency = trust. Scattered messaging = forgotten.'},
+];
+
+/* ═══ RENDER ═══ */
+const TYPE_META={core:{label:'Core',icon:'⭐',cls:'badge-core',color:'#047857',bg:'#ECFDF5',iconBg:'#D1FAE5'},gap:{label:'Gap / Cron',icon:'⏰',cls:'badge-gap',color:'#B45309',bg:'#FFFBEB',iconBg:'#FDE68A'},view:{label:'Trigger View',icon:'👁️',cls:'badge-view',color:'#1D4ED8',bg:'#EFF6FF',iconBg:'#BFDBFE'}};
+const LAYER_META={platform:{label:'Platform',cls:'badge-platform',iconBg:'#EFF6FF'},tenant:{label:'Store',cls:'badge-tenant',iconBg:'#ECFDF5'},fraud:{label:'Fraud',cls:'badge-fraud',iconBg:'#FEF2F2'}};
+let metaFilter='all',layerFilter='all';
 
 function renderMeta(){
-  const list = document.getElementById('meta-list');
-  const shown = META.filter(e => metaFilter==='all' || e.type===metaFilter);
+  const list=document.getElementById('meta-list');
+  const shown=META.filter(e=>metaFilter==='all'||e.type===metaFilter);
   if(!shown.length){list.innerHTML='<div class="empty">No events for this filter</div>';return;}
-  list.innerHTML = shown.map((e,i) => {
-    const tm = TYPE_META[e.type];
-    return `<div class="ev-card" id="mc${i}">
+  list.innerHTML=shown.map((e,i)=>{
+    const tm=TYPE_META[e.type];
+    return`<div class="ev-card" id="mc${i}">
       <div class="ev-header" onclick="toggleCard('mc${i}')">
         <div class="ev-type-icon" style="background:${tm.iconBg}">${e.icon}</div>
         <div class="ev-name">${e.name}</div>
@@ -675,51 +768,106 @@ function renderMeta(){
 }
 
 function renderLayers(){
-  const list = document.getElementById('layer-list');
-  const shown = LAYERS.filter(e => layerFilter==='all' || e.layer===layerFilter);
+  const list=document.getElementById('layer-list');
+  const shown=LAYERS.filter(e=>layerFilter==='all'||e.layer===layerFilter);
   if(!shown.length){list.innerHTML='<div class="empty">No events for this filter</div>';return;}
   let lastLayer='';
-  list.innerHTML = shown.map(e => {
-    const lm = LAYER_META[e.layer];
+  list.innerHTML=shown.map(e=>{
+    const lm=LAYER_META[e.layer];
     let header='';
     if(e.layer!==lastLayer){
       lastLayer=e.layer;
-      const layerIcons={platform:'🏢',tenant:'🛒',fraud:'🛡️'};
-      const layerNames={platform:'Platform Layer — Business & Account Events',tenant:'Store Layer — Seller & Customer Events',fraud:'Fraud Layer — Risk & Protection Events'};
-      header=`<div style="display:flex;align-items:center;gap:8px;padding:18px 0 8px;font-size:12px;font-weight:600;color:var(--muted);letter-spacing:.06em;text-transform:uppercase">
-        <span>${layerIcons[e.layer]}</span><span>${layerNames[e.layer]}</span>
-      </div>`;
+      const li={platform:'🏢',tenant:'🛒',fraud:'🛡️'};
+      const ln={platform:'Platform Layer — Business & Account Events',tenant:'Store Layer — Seller & Customer Events',fraud:'Fraud Layer — Risk & Protection Events'};
+      header=`<div style="display:flex;align-items:center;gap:8px;padding:18px 0 8px;font-size:12px;font-weight:600;color:var(--muted);letter-spacing:.06em;text-transform:uppercase"><span>${li[e.layer]}</span><span>${ln[e.layer]}</span></div>`;
     }
-    return `${header}<div class="ev-card" style="cursor:default">
-      <div class="ev-header" style="cursor:default">
-        <div class="ev-type-icon" style="background:${lm.iconBg}">${e.icon}</div>
-        <div class="ev-name">${e.name}</div>
-        <div class="ev-plain">${e.plain}</div>
-        <span class="ev-badge ${lm.cls}">${lm.label}</span>
-      </div>
-    </div>`;
+    return`${header}<div class="ev-card" style="cursor:default"><div class="ev-header" style="cursor:default">
+      <div class="ev-type-icon" style="background:${lm.iconBg}">${e.icon}</div>
+      <div class="ev-name">${e.name}</div>
+      <div class="ev-plain">${e.plain}</div>
+      <span class="ev-badge ${lm.cls}">${lm.label}</span>
+    </div></div>`;
   }).join('');
 }
 
-function toggleCard(id){
-  const el=document.getElementById(id);
-  el.classList.toggle('expanded');
+function renderStrategy(){
+  // Standard event deep-dive cards
+  document.getElementById('edg-container').innerHTML=STD_EVENTS.map(e=>`
+    <div class="edg-card">
+      <div class="edg-top">
+        <div class="edg-icon-row">
+          <div class="edg-icon" style="background:${e.bg}">${e.icon}</div>
+          <div><div class="edg-event">${e.event}</div><div class="edg-stage" style="background:${e.stageBg};color:${e.stageColor}">${e.stage}</div></div>
+        </div>
+        <div class="edg-desc">${e.desc}</div>
+      </div>
+      <div class="edg-body">
+        <div class="edg-row"><div class="edg-label">Meta uses it for</div><div class="edg-val">${e.metaUsesDesc}</div></div>
+        <div class="edg-row"><div class="edg-label">Timeline</div><div class="edg-val">${e.timeline}</div></div>
+        <div class="edg-action"><div class="edg-action-label">💼 Your action</div><div class="edg-action-val">${e.action}</div></div>
+      </div>
+    </div>`).join('');
+
+  // Custom audience table
+  document.getElementById('ca-rows').innerHTML=CA_ROWS.map(r=>`
+    <div class="ca-row">
+      <div class="ca-event"><span>${r.icon}</span>${r.event}</div>
+      <div class="ca-audience">${r.audience}</div>
+      <div class="ca-use">${r.use}</div>
+    </div>`).join('');
+
+  // Funnel stages
+  document.getElementById('funnel-stages').innerHTML=FUNNEL.map((f,i)=>`
+    <div class="fs">
+      <div class="fs-left">
+        <div class="fs-num" style="background:${f.numBg};color:${f.numColor}">${f.num}</div>
+        ${i<FUNNEL.length-1?'<div class="fs-line"></div>':''}
+      </div>
+      <div class="fs-body">
+        <div class="fs-stage" style="color:${f.stageColor}">${f.stage}</div>
+        <div class="fs-name">${f.name}</div>
+        <div class="fs-desc">${f.desc}</div>
+        <div class="fs-chips">${f.chips.map(c=>`<span class="chip ${c.c}">${c.t}</span>`).join('')}</div>
+      </div>
+    </div>`).join('');
+
+  // Compound loop
+  const lsEl=document.getElementById('loop-steps');
+  lsEl.innerHTML=LOOP.map((s,i)=>`
+    ${i>0?'<div class="loop-divider"></div>':''}
+    <div class="loop-step">
+      <div class="loop-step-icon" style="background:${s.bg}">${s.icon}</div>
+      <div class="loop-step-body">
+        <div class="loop-step-title">${s.title}</div>
+        <div class="loop-step-desc">${s.desc}</div>
+      </div>
+    </div>`).join('');
+
+  // Checklist
+  document.getElementById('checklist-rows').innerHTML=CHECKLIST.map((c,i)=>`
+    <div style="display:flex;gap:12px;padding:14px 18px;border-bottom:${i<CHECKLIST.length-1?'1px solid var(--border)':'none'};align-items:flex-start;cursor:pointer;transition:background .15s" onclick="toggleCheck(this)" onmouseenter="this.style.background='var(--gray-light)'" onmouseleave="this.style.background=''">
+      <div style="width:22px;height:22px;border-radius:6px;border:2px solid var(--border);display:flex;align-items:center;justify-content:center;font-size:12px;flex-shrink:0;margin-top:1px;transition:all .15s" class="chk-box">
+        <span class="chk-mark" style="display:none;color:var(--green-dark)">✓</span>
+      </div>
+      <div style="flex:1">
+        <div style="font-size:13px;font-weight:600;color:var(--text);display:flex;align-items:center;gap:6px;margin-bottom:3px">${c.icon} ${c.title}</div>
+        <div style="font-size:12px;color:var(--muted);line-height:1.55">${c.desc}</div>
+      </div>
+    </div>`).join('');
 }
 
-function filterMeta(f,btn){
-  metaFilter=f;
-  document.querySelectorAll('#panel-meta .filter-btn').forEach(b=>b.classList.remove('on'));
-  btn.classList.add('on');
-  renderMeta();
+function toggleCheck(row){
+  const box=row.querySelector('.chk-box');
+  const mark=row.querySelector('.chk-mark');
+  const done=mark.style.display==='none';
+  mark.style.display=done?'block':'none';
+  box.style.background=done?'var(--green-light)':'';
+  box.style.borderColor=done?'var(--green)':'var(--border)';
 }
 
-function filterLayer(f,btn){
-  layerFilter=f;
-  document.querySelectorAll('#panel-layers .filter-btn').forEach(b=>b.classList.remove('on'));
-  btn.classList.add('on');
-  renderLayers();
-}
-
+function toggleCard(id){document.getElementById(id).classList.toggle('expanded')}
+function filterMeta(f,btn){metaFilter=f;document.querySelectorAll('#panel-meta .filter-btn').forEach(b=>b.classList.remove('on'));btn.classList.add('on');renderMeta()}
+function filterLayer(f,btn){layerFilter=f;document.querySelectorAll('#panel-layers .filter-btn').forEach(b=>b.classList.remove('on'));btn.classList.add('on');renderLayers()}
 function showPanel(id,btn){
   document.querySelectorAll('.panel').forEach(p=>p.classList.remove('active'));
   document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));
@@ -727,8 +875,7 @@ function showPanel(id,btn){
   btn.classList.add('active');
 }
 
-renderMeta();
-renderLayers();
+renderMeta(); renderLayers(); renderStrategy();
 </script>
 </body>
 </html>
